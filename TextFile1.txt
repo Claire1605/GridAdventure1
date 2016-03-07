@@ -1,0 +1,130 @@
+﻿//To do:
+	-working on squirrel quest - riftonmap44
+//Ongoing:
+	-Help menu - add all story counter points - 1 per story counter
+	-update quest log 
+	-all subsequent maps need newlocation updating
+	-add all item types to UseItem(), for outside battle, books etc.
+	-add all items to referenceCurrentItem
+	-item types - add all to playeritem and playerchoice! - battle
+	-remember to update visitorder places
+	-use shovel/dig - test allotment quest
+//Text/Story:
+	-change main character half way through, because why would a research biologist fight the evil corporation??
+	-up to prof fournier quests, need to continue from here, starting with splicing meeba second time
+		**-make it more obvious that there are side-quests, run through and also make sure main quests are easy to follow
+	-add more flavour text in regards to reusable energy
+//Map:
+	-hidden items e.g. exam fountain to get something, or in weapons shop manakin has chainmail/gloves
+	-Secret Area in Rifton Forest - key?
+	-maybe extend waterfall area upwards like in original mfc map
+	-fast-travel between cities later in game
+//Items:
+	-item types e.g. healthgain - finalise these and add to battle
+	-better name for evostone - change this to expousre of meeba to the radiation, don't need to collect evostone, also don't need to use this is evolution!
+	-side-quests to collect items needed for modding item - anton's quests
+	-full heal items/poke centres/healing wells - more healing -poke centre, and thus enemies do more damage
+	-need healing items for status ailments
+	-more variety if items that people can give you/you can find - potions etc.
+	-maybe to simplify things - monsters just have to be exposed to the evostone area rather than collect a stone from it, then only need one item while evolving. also then makes sense why monsters would gather there, need to change DNA, detector, every instance of meteorite ..
+	-do i want all dig items to be dug all at once? or should they be randomised? think about ellondite and people potentially not collecting 2 of them - maybe i should only collect one sample and use it twice anyway
+	-check buy/sell values
+//Battle
+	-New ascii animations for all enemies - probably once enemies have been solidified
+	-move descriptions to look at in menu?
+	-if statusprotect... - player items
+	-what items do i want to be able to use in battle?
+		-status ailment items
+			-tempitembonus stat
+	-needs a lot of balancing
+	-default attack when one enemy after others defeated
+	-if try to attack defeated enemy choose another
+	-enemies not red on pyroclastic flow's attack
+		-said it defeated some opponents even when it didn't?
+	-mini-bosses and bosses
+//Enemies:
+	-after testing - customise individual enemy stats a bit more
+//Save: 
+	-xml serialisation/json
+//NPCs:
+	-enemy namer guy, is ridiculous
+//Computer:
+	-dna - make some cool dna imagey stuff for 'dna sequencing'
+	-dictionary of things such as item drops, moves etc.
+	-dollogrid colours need fixing - f1 ->f2 etc.
+	-give all writing more character/flavour, more ... etc.
+	-music, find books with ascii scores in - learn and save songs, does things? stat boost/encounter rate/opens secret places etc.
+	-music - find flutefly flute
+	-one qr code is actually a dungeon map
+	E.G. 
+--------------------------------|
+  _
+-|-|----------------------------|
+* * 
+-----|------------------------_-|
+    o                |       | |
+--------------------*-------*-*-|
+   
+--------------------------------|
+o    semibreve (1) - 32 spaces
+
+ |
+o    minim (2) - 16 spaces
+
+ |
+*    crotchet (4) - 8 spaces
+  _
+ | |
+* *  quaver (8) - 4 spaces
+
+//player had been studying the monsters previously so knows their names?
+//charisma stat is apparently useless but important at some point, one monster that has really high snazziness and you can only beat him if you have higher, 'don't hate him because he's beautiful'
+-most people explore lots before going to cave - make things to do and esp. things to come back to/locked houses
+ -lava bubble too poweful? flame slugger on beach
+ -weapons, space between  STICK and [], doesn't list equipped items, doesn't show text for creation
+ -boat guys union - in water town they reference it
+ -sort out gateways in laharva etc.
+
+//Extras:
+//ascii person that shows items equipped?
+//boss with conversation tree - have to pick correct responses
+//easter eggs
+//drink pond water, jump in, swim, feed the ducks
+//item that takes you directly somewhere
+//straw should be a broken item, eat straw to become scarecrow
+//reference echo the dolphin, trident, aquaman, lobster king and lobsters inc. lobster bishop and crab popes and shrimp librarian, mega ape and retro ape
+//passwords for save files
+//you can't get ye flask - then contemplate why ye can't get ye flask
+//xyzzy code http://en.wikipedia.org/wiki/Colossal_Cave_Adventure
+//make starfish skuriken item
+-scan monsters? produce database of them, along with records of environment etc.?
+
+//Set a few hundred/thousand years after the Rift War in MFC. The Rift occurred long ago in the past (marking the end of human technology/pollution/etc.), and created two parallel (post-Earth-apocalyptic) worlds - one world absorbed all the pollution/radiation etc., while the other remained fairly clean, although due to glitches and tears in the boundary between the two, some pollution contaminants remained and led to monstrum gene etc.
+//During the Rift war, the two parallel worlds were the closest they had ever been due to the actions of Eclipse, whose goal is to reach the other parallel world, where they believe there is a resource of unlimited power - when the worlds become 'eclipsed' they will be able to reunite them and access the parallel world's resources
+//Eclipse had been experimentng with energy from monsters and believed that by further splicing, creating huge amounts of radiation energy and eventual unity with the parallel world they could hold a monopoly on energy
+//This game is set after the Rift War, where Eclipse (having lost the Rift War and finally severed the link with the parallel world) have moved on to try to test the limits of splicing and create energy this way, but in the process they have contaminated the land with monsters, and the only way to fight back is with low-level splicing to finally shut them down
+
+//not meteorite, but crystals formed in particular igneous rock at certain point in time in geological history
+ -relating to the 'hot spots' of protomeebium 
+ -rock has high levels of uranium - meeba decays uranium on evolution, causing nuclear fission on massive scales
+	-could just be a highly exothermic reaction
+ OR
+ -protomeebium && meeba have high levels or Ur, but need the catalyst to evolve - the catalyst is the rock found at the hotspot
+ -hotspots causing pollution and seen as bad - since eclipse are 'cleaning this up' they project themselves as good, but in reality they are causing harm to the monsters and actually making the damage much worse
+
+
+ lava - rock crystallises, contains radioactive material
+	-the decay product reacts with the dna/element in meeba to make evolution happen
+		-gamma rays from radiation, but also something else, a mineral? something about the rock
+	-hugely exothermic reaction
+-decay causes radioactive pollution
+-eclipse say they are cleaning it up by diverting it all to their lab, where they will store it safely, and make energy resource in the process
+	-which they are doing, but the process is the forced evolution of meeba beyone their natural means
+
+
+Hot-spot eruptions - igneous rock
+	-granitic with mineral - pegmeebite
+	-ellondite
+
+-eclipse evolve them beyond what they are naturally capable of, into 'futuristic' forms, including evolution of two new types - psychic and cyborg
+	-references to there only being 3 types in the past - fire, water, earth - 'in the begininning, 3 elements arose' or something

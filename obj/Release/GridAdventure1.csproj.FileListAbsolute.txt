@@ -1,0 +1,6 @@
+C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\GridAdventure1.exe.config
+C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\GridAdventure1.exe
+C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\GridAdventure1.pdb
+C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\GridAdventure1.csprojResolveAssemblyReference.cache
+C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\GridAdventure1.exe
+C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\GridAdventure1.pdb

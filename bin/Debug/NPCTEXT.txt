@@ -1,0 +1,512 @@
+-@@- VANYA PETROV-@@- FLATMATE -@@-
+NPC0000
+//Random responses 
+0
+*NPCNAME* "That lab is in such a pretty location, right at the top of the village where you get the best views of the valley."
+END
+1
+*NPCNAME* "I bet you're excited for your new job, *NAME*!"
+END
+2
+*NPCNAME* "Since you moved in last week it's felt much more like a home again with a new lodger here."
+END
+3
+*NPCNAME* "Good luck today, *NAME*! Don't forget that if you get stuck there's help in your e-guide, just type 'menu' to access it!
+Oh, one more thing! The guy who runs the drinks stand in the park sent a survey asking for new ideas for products - what's your *YELLOW*favourite drink,*/YELLOW* *NAME*?"
+END
+ENDNPC0000
+
+
+-@@- RUFUS DIGBY -@@- MAIN RIFTON SCIENTIST -@@-
+NPC0001
+0
+*NPCNAME* "Good to see you, *NAME*!
+For your first task I need you to collect a sample of some *YELLOW*Protomeebium*/YELLOW* we've been studying from Rifton Cave to the west of the village.
+Our lab gets funding when we progress our research, so you should receive your first paycheck once we find out more about the *YELLOW*Protomeebium.*/YELLOW*
+I'll provide you with a flashlight - be careful, there are violent monsters in there!"
+END
+//If bag is full
+1
+*NPCNAME* "Maybe you should get rid of something from your bag first, you'll give yourself back problems if you carry that much!"
+END
+//can't find protomeebium
+2
+*NPCNAME* "Are you having trouble finding the *YELLOW*Protomeebium*/YELLOW*? It's in Rifton Cave somewhere, head to the west of the village to get there."
+END
+//found protomeebium
+3
+*NPCNAME* "Yes! That's it! I see you're a first-class scientist in the making.
+I'll begin studying straight away. You should try to investigate the origins of this material too, *NAME*."
+END
+//found protomeebium book
+4
+*NPCNAME* "...This *YELLOW*Protomeebium*/YELLOW* book is EXACTLY what I've been looking for! Ahh! According to this research, the *YELLOW*Protomeebium*/YELLOW*requires a catlayst in order to begin accelerated evolution...
+I wonder...I have been studying this *YELLOW*Ellondite*/YELLOW* for some time due to its rarity.
+It was found close to the *YELLOW*Protomeebium*/YELLOW* site and seems to match the description in the book."
+*GREY*Dr. Tanaka passes the Ellondite to Dr. Digby, who places it somewhere within the depths of the machinery.
+*NPCNAME* "Amazing! The reaction has created life! I shall name them *YELLOW*Meeba*/YELLOW* after the substance they formed from.
+*NAME*, can I give these to you to study? Please keep track of any changes you see in them."
+*GREY*You gained two of Dr. Digby's Meeba creations. They will assist you in battle, and can be accessed through the menu.
+"The Meeba should be able to provide some defense against the monsters outside the village too."
+*GREY*Dr. Tanaka is looking perplexed and looks like she wants to talk to you.
+END
+5
+*NPCNAME* "I've started writing up some of these results, we need more Ellondite to do more testing though."
+END
+//found ellondite
+6
+*NPCNAME* "You found another *YELLOW*Ellondite*/YELLOW*?? I was starting to worry we'd never be able to re-produce these results.
+We've been doing a little research while you were away, and have made some progress with understanding the Meeba.
+It seems that Meeba may be able to adapt to their surroundings at speeds on par with the evolution of new species."
+Dr.Tanaka "Previously we've been able to combine materials collected from monsters to make *YELLOW*'roots'*/YELLOW*.Roots maintain the essence of the monsters they were created from, and we think that we may be able to use them alongside the *YELLOW*Ellondite*/YELLOW* in order to direct the evolutionary pathway of the Meeba!
+*NPCNAME* "Let's get straight to it! Hopefully you already collected monster materials on your travels, if not could you collect some samples now for us.
+Dr.Tanaka "When you have your samples ready, access the computer and combine them in the *YELLOW*GRAFTING menu*/YELLOW*. You can type exit in any menu to return to the previous menu.
+Then, access the *YELLOW*DNA menu*/YELLOW*,
+and select *YELLOW*SPLICE*/YELLOW* and we'll see what happens!"
+END
+//spliced first meeba
+7
+*NPCNAME* "This is incredible! Not only has the Meeba evolved into a new species, but it has taken on characteristics of the monsters the *YELLOW*root*/YELLOW* was created from.
+This solidifies your mission, *NAME*. Go forth and search the world for more *YELLOW*Ellondite!*/YELLOW* Collect samples from monsters from lands far and wide! We will study these Meeba and discover the nature of their power!
+You should head over to *YELLOW*Karstbay*/YELLOW* - one of my colleagues has a lab over there. I'll send her over the information we've gathered so far and you'll be able to set up base there.
+There's a boat that travels from *YELLOW*Rifton Beach*/YELLOW* to Karstbay regularly."
+END
+//general statement
+8
+*NPCNAME* "It's great to have you on the team now, *NAME*."
+END
+ENDNPC0001
+
+
+-@@- ASUKA TANAKA -@@- VISITING RIFTON SCIENTIST -@@-
+NPC0002
+0
+*NPCNAME* "This new equipment allows us to extract and examine DNA sequences of many different species."
+END
+1
+*NPCNAME* "This is amazing, I've read theories about this but never thought I'd see it in real life!"
+END
+2
+*NPCNAME* "The library here in Rifton is mainly Dr. Digby's personal collection that he donated. I've never seen that one though, you should let him see it."
+3
+*NPCNAME* "This is a great discovery, but the reaction destroyed the Ellondite. There's no way we'll be able to re-create the results now.
+*NAME*, do you think you could try and track down some more Ellondite? The miners by the *YELLOW*excavation shack*/YELLOW* are seasoned geologists and may be able to help."
+END
+4
+*NPCNAME* "When you have your samples ready, access the computer and combine them in the *YELLOW*GRAFTING menu*/YELLOW*.You can type exit in any menu to return to the previous menu.
+Then, access the DNA menu and select *YELLOW*SPLICE*/YELLOW* and we'll see what happens!"
+END
+5
+*NPCNAME* "We'll contact you when you get to *YELLOW*Karstbay*/YELLOW*, thanks for all your work so far!"
+END
+6
+*NPCNAME* "Keep giving us information on the Meeba!"
+END
+ENDNPC0002
+
+
+-@@- RIFTON LIBRARIAN -@@-
+NPC0003
+//Random greetings (0-3)
+0
+*NPCNAME* "I hope your new job is going well."
+END
+1
+*NPCNAME* "It's good to see the science books being loaned again."
+END
+2
+*NPCNAME* "I'm glad to see you're settling in to Rifton."
+END
+3
+*NPCNAME* "It's nice to see you again."
+END
+//Goodbye/Leaving
+4
+*NPCNAME* "Please visit again."
+END
+//Ask for help, non-specifically
+5
+*NPCNAME* "What do you need help with?"
+END
+//Ask about protomeebium
+6
+*NPCNAME* "That's a popular subject recently... I think one of the *YELLOW*people over there*/YELLOW* took most of the books on that subject."
+END
+//Ask about books in general
+7
+*NPCNAME* "Most of our books here were kindly donated by Dr. Digby. But we have a decent collection on a variety of subjects. I keep a selection of our most popular books by the window over there."
+END
+//Else..
+8
+*NPCNAME* "Have a browse through the shelves if you're not after anything specific."
+*NPCNAME* "Do you need help with anything else?"
+END
+//Ask about people in library
+9
+*NPCNAME* "You'll have to talk to them yourself, it's contrary to my job description to interfere with personal matters!"
+END
+ENDNPC0003
+
+
+-@@- ELDERLY LIBRARY MAN -@@-
+NPC0004
+0
+*NPCNAME* "I've been reading up on how to make my crops in the allotments to the south of the village grow more successfully, but I just can't seem to help the poor things!"
+END
+//On giving him the book
+1
+*NPCNAME* "Oh! I've not read this one yet..."
+*NPCNAME* "Ahh, it seems the soil is the problem. I knew all that pollution couldn't be good for the plants."
+*NPCNAME* "Thank you so much for this, I'll head to the allotment straight away! If you see my wife could you tell her we fixed the problem please? I'm sure she'll be very grateful. We live in the *YELLOW*cottage south of here*/YELLOW*."
+END
+2
+*NPCNAME* "It looks like the crops will be able to grow again for now!"
+END
+ENDNPC0004
+
+
+-@@- DARK HAIRED LIBRARY WOMAN -@@-
+NPC0005
+0
+*NPCNAME* "The city of Mesetra looks so wonderful. The landscape was created naturally from wind eroding the rocks into beautiful structures, and when people settled there they harnessed the power of the wind to provide energy - I suppose that's even more important these days... I'd like to live there someday."
+END
+ENDNPC0005
+
+
+-@@- SKETCHY LIBRARY MAN -@@-
+NPC0006
+0
+*NPCNAME* "..."
+END
+1
+*NPCNAME* "Can't you see I'm busy?"
+END
+2
+*NPCNAME* "OK fine. What do you want?"
+END
+//Don't want anything
+3
+*NPCNAME* "Ugh, stop wasting my time!"
+END
+//Ask about book
+4
+*NPCNAME* "This book? ...
+Why should I give it to you?"
+END
+5
+*NPCNAME* "Whoa, chill out!
+I've got everything I need from this anyway, ehehehe. Don't bother me again though."
+END
+6
+*GREY*You received the *YELLOW*Protomeebium book*/YELLOW*. The man stood up quickly and walked out of the library.
+END
+7
+*NPCNAME* "You don't even have space to carry this."
+END
+ENDNPC0006
+
+
+-@@- ELDERLY COTTAGE WOMAN -@@-
+NPC0007
+0
+*NPCNAME* "My husband and I own the allotment at the east of the village, but I don't know what happened recently. 
+Our crops used to grow succesfully every year, but this season we can't grow a thing. 
+He still keeps trying to find answers in the library though!"
+END
+1
+*NPCNAME* "Oh, wonderful! You helped my husband find a solution to our crop problem? Let me give you something in return."
+END
+2
+*GREY*You received a set of knitted clothing.
+END
+3
+*NPCNAME* "I have something else to show you that you might be interested in.
+This is a photo of Rifton that was taken just after the laboratory was built - what a beautiful village we live in!"
+END
+4
+*NPCNAME* "Oh dear, you don't have space, please come back when you do!"
+END
+ENDNPC0007
+
+
+-@@- RIFTON JEMMA BLACKSMITH -@@-
+NPC0008
+0
+*NPCNAME* "Hey. Need some help?"
+END
+1
+*NPCNAME* "Since Karstbay law changed, I'm not able to sell as many weapons as I'd like. 
+They're not allowed in the capital at all, and there's limitations on what stock I can keep these days. 
+Pretty bad for business really, but people do seem to be taking more of an interest in historical and ornamental weapons because of it.
+If it's weapons you want though, take a look at the rack over there. 
+If there's something you want take it and I'll tell you how much it is."
+END
+//Ask about anything else
+2
+*NPCNAME* "Sorry I only deal with weapons here."
+END
+ENDNPC0008
+
+
+-@@- RIFTON DRINKS VENDOR -@@-
+NPC0009
+0
+*NPCNAME* "Would you like to see our drinks offers?"
+END
+//no drink
+1
+*NPCNAME* "Ok, your loss!"
+END
+2
+*NPCNAME* "*YELLOW*Pipon Shakes*/YELLOW* come in four flavours: Red, Blue, Green, and Pink! We also have a special trial offer for *FAVDRINK*! So, what can I get for you?"
+END
+3
+*NPCNAME* "It looks like you're carrying too much already, come back when you have some more space!"
+END
+4
+*NPCNAME* "Thanks, and enjoy!"
+END
+5
+*NPCNAME* "Not enough money? Sorry, I can't take my prices any lower! Come back another time."
+END
+6
+*NPCNAME* "I didn't quite catch that, shall I tell you our drinks offers?"
+END
+ENDNPC0009
+
+
+-@@- GUTO MINER -@@-
+NPC0010
+0
+Guto: Hey, Bart?
+Bart: Yeah?
+Guto: What do you do with a dead geologist?
+Bart: I dunno, what do you do?
+Guto: You BARIUM!
+Bart: Bahaha
+END
+1
+Guto: Hey, Bart?
+Bart: Yeah?
+Guto: Did you hear the joke about the mountain?
+Bart: Nope, what is it?
+Guto: I can't tell you, there's no way you'd get over it!
+Bart: Hoho!
+END
+2
+Guto: Hey, Bart?
+Bart: Yeah?
+Guto: Where do geologists like to relax? 
+Bart: I dunno, where?
+Guto: In a ROCKING chair!
+Bart: Oooh goodun'!
+END
+3
+Guto: Hey, Bart?
+Bart: Yeah?
+Guto: Why did the woman leave her husband?
+Bart: I dunno, why did she?
+Guto: Because he'd been taking her for GRANITE!
+Bart: Hahaha!
+END
+4
+Guto: Hey, Bart?
+Bart: Yeah?
+Guto: What did they say about the pebble who was too shy?
+Bart: I dunno, what did they say?
+Guto: It could have been a little BOULDER!
+Bart: Bahaha
+END
+5
+Guto: Nothing like some good puns to make the day go by.
+Guto: Did you need something?
+END
+6
+Guto: Ah well, come back if you need something
+END
+7
+Guto: You know, I think I did see something like that down on the *YELLOW*beach*/YELLOW*.
+Guto: Take this pickaxe if you want to go digging, we'll make an amateur geologist out of you yet!
+*GREY*You received a pickaxe from Guto. Type 'dig' to use it.
+END
+8
+Guto: I don't know about that. But, did you know that Rifton was formed millions of years ago from an ancient submerged volcano? That's my fact of the day!
+Guto: Did you need something else?
+END
+9
+Guto: These caves extend way back behind Rifton. We've found a few cave systems like these around the world.
+END
+ENDNPC0010
+
+
+-@@- BART MINER -@@-
+NPC0011
+0
+Bart: Hey, Guto?
+Guto: Yeah?
+Bart: I think you made a mistake on this dig.
+Guto: Oh no, really?
+Bart: Yeah, but don't worry, we all have our FAULTS!
+Guto: Aha! You got me again!
+END
+1
+Bart: Hey, Guto?
+Guto: Yeah?
+Bart: I just want to say what a GNEISS person you are!
+Guto: Aw, thanks, I guess it's just because I'm so DOWN TO EARTH!
+Both: Hahahahaha!
+END
+2
+Bart: Hey, Guto?
+Guto: Yeah?
+Bart: I'm really not sure about the work we're doing here.
+Guto: Why's that?
+Bart: I just think we need to start fresh with a clean SLATE!
+Guto: Hehe, GNEISS one!
+END
+3
+Bart: Hey, Guto?
+Guto: Yeah?
+Bart: What do you think of Geology?
+Guto: Well you know me, I really DIG it!
+Bart: You're right, it ROCKS!
+Both: Bahaha!
+END
+4
+Bart: Ahh that was a good break from work.
+Bart: Did you need something?
+END
+5
+Bart: Ah well, come back if you need something!
+END
+6
+Bart: You know, I think I did see something like that down on the *YELLOW*beach*/YELLOW*.
+Bart: Take this pickaxe if you want to go digging, we'll make an amateur geologist out of you yet!
+*GREY*You received a pickaxe from Bart. Type 'dig' to use it.
+END
+7
+Bart: I don't know about that. But, did you know that oil is made from the remains of ancient plants?
+Bart: Shame there's not more of it around really, I heard it's a great fuel source.
+Bart: Did you need something else?
+END
+8
+Bart: You can learn so much about the history of the world by studying the ground beneath our feet
+END
+ENDNPC0011
+
+
+-@@- RIFTON SAILOR -@@-
+NPC0012
+0
+Sailor: Normally the ship sails between Rifton Beach and Karstbay all day, but all us boat guys are on strike at the moment until they put our wages up.
+Sailor: I'm taking this opportunity to do some fishing in the sun.
+Sailor: Catchin' some rays and catchin' some 'rays, as they say!
+END
+1
+Sailor: The Boat Guys Union strike was a success! Better wages for all sailors.
+END
+2
+Sailor: We're about to depart for *YELLOW*Karstbay*/YELLOW*, would you like a season-ticket? Only 30 Aug!
+END
+3
+Sailor: Ok, see you around.
+END
+4
+Sailor: Great, the boat will be departing soon, embark at the end of the quay!
+END
+5
+Sailor: It sure is good to be able to get out on the open ocean again.
+END
+ENDNPC0012
+
+
+-@@- BRIGITTE FOURNIER -@@-
+NPC0013
+0
+Prof. Fournier: Hi, you must be *NAME*! I've been expecting you.
+Prof. Fournier: Since Dr.Digby contacted me about the Ellondite and its affect on the protomeebium we've been trying to track down more locations of the rock.
+Prof. Fournier: It seems to be a very specific meteoritic rock that has these properties - both the sample you collected and the one Rufus had are identical. 
+Prof. Fournier: Other Ellondite samples we have don't appear to have an effect.
+Prof. Fournier: So, now our next task is to study and identify this rock in order to track down other outcrops of it.
+Prof. Fournier: Currently we know that the rock contains very *YELLOW*high levels of uranium*/YELLOW*.
+Prof. Fournier: I had this *YELLOW*detector*/YELLOW* custom made to detect radiation from uranium in nearby rock outcrops.
+Prof. Fournier: It shows high readings near the *YELLOW*limestone caves*/YELLOW*, so maybe there is an outcrop of the rock there.
+Prof. Fournier: Please take this detector and search for it in the caves to the east of the lab *YELLOW*(type 'detector' to use)*/YELLOW*.
+END
+//if space in bag
+1
+*GREY*You received a detector.
+END
+//if no space
+2
+Prof. Fournier: You'll need to make some space for this.
+END
+3
+Prof. Fournier: Use the detector to search the caves for traces of the rock (type 'detector').
+END
+4
+Prof. Fournier: Ah you found some! The detector did its job then. I'll take half for research purposes and you should have enough left to experiment with your meeba.
+Prof. Fournier: Take it over to the computer and use it as a catalyst like you did at Rufus's lab.
+END
+ENDNPC0013
+
+
+-@@- ANTON BLACKSMITH -@@-
+NPC0014
+0
+Anton the Blacksmith: Oh! That weapon of yours is from Rifton isn't it? My daughter works in the weapons shop there.
+Anton the Blacksmith: I'll help you out a bit then - since the city law got changed I've not been able to work with weapons, but I can make an excpetion for a family friend as long as you keep it strictly confidential!
+END
+1
+Anton the Blacksmith: How's it going, would you like me to upgrade your weapons and armour? Or do you need to downgrade them? 
+END
+2
+Anton the Blacksmith: Great! Which item would you like to modify?
+END
+3
+Anton the Blacksmith: OK, see you another time.
+END
+4
+Anton the Blacksmith: This can't be upgraded anymore.
+END
+5
+Anton the Blacksmith: That's just what I need! Let me upgrade it for you...
+END
+//if don't have correct item
+6
+Anton the Blacksmith: Don't lie to me! Come back when you have one.
+END
+7
+Anton the Blacksmith: Great! Which item would you like to downgrade?
+END
+8
+Anton the Blacksmith: Ok, removing all modifications...
+END
+9
+Anton the Blacksmith: ...Aaand, done! Let me know if there's anything else you need.
+END
+ENDNPC0014
+
+
+-@@- RIFTON SHOP KEEPER -@@-
+NPC0015
+0
+Rifton Shop Keeper: Hi there, let me know if you need anything. You should be able to find anything you need on the shelves.
+END
+ENDNPC0015
+
+
+-@@- FOUNTAIN MAN -@@-
+NPC0016
+0
+Man: What will you wish for today?
+Woman: I wish that this pollution would stop destroying our crops and our health.
+*GREY*She tosses a coin into the fountain.
+END
+1
+Man: What is wrong with you? What kind of person steals from a wishing well?
+Woman: I hope my wish still comes true...
+END
+ENDNPC0016
+
+ENDFILE

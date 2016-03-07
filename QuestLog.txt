@@ -1,0 +1,30 @@
+﻿Main story:
+0Ag:
+1: Speak to Dr. Digby in Rifton Lab in the North of Rifton Village
+100Ag:
+2: Find a sample of Protomeebium in Rifton cave
+3: Find the Protomeebium book for Dr.Digby
+4: Find another source of the radiation
+5: Use the lab equipment to splice the meeba
+6: Visit Professor Fournier in Karstbay
+150g
+7: Use the detector to locate the radiation in Karstbay caves
+Splice the meeba using Professor Fournier's lab equipment  - haven't included remove. this yet
+
+SIDE QUESTS:
+RIFTON:
+S1: Elderly Library Man: (Rewards - QR and armour set)
+S2: Find gardening book for elderly man in Library
+S3: Visit the elderly man's wife in Rifton
+
+KARSTBAY:
+
+LAHARVA:
+
+ARBELLE:
+
+GRABEN:
+
+MESETRA:
+
+CORALLOS:

@@ -1,0 +1,38 @@
+﻿0: Start - need to get protomeebium
+1: Got protomeebium, need to get book
+2: Got book - meeba evolved
+3: Quest for ellondite begins
+4: Got first ellondite - meeba evolution1
+5: Talked to Professor Fournier in Karstbay
+6: Collected ellondite from karstbay caves
+
+
+
+
+Quests and Story Chronology:
+-Start in your house, computer introduces game, instructed to see Digby
+-Quest received from Digby - find the protomeebium sample
+-Get protomeebium, return to digby, need to find book from the library
+-In library - get protomeebium book
+	-Sidequest in library - get gardening book for old man, receive knitted armour from his wife
+-Take book to digby, need to find ellondite on beach, talk to guto and bart first
+	-Side quest - Secret area in forest - 
+-Puzzle - stop the flow of the waterfall to reach the ellondite
+-Take ellondite back to digby, evolve first meeba
+-Take boat to Karstbay to talk to Fournier about other locations of ellondite
+-Fournier gives you the radiation detector and asks you to explore the caves
+-Find ellondite in cave and return to fournier, evolve meeba second time
+-Fournier tells you that there is some link between the geology and the ellondite but it needs further investigation, and asks you to continue your field investigations to find more of the rock/ellondite in the surrounding areas, and explains where these areas are, encouraged to explore kartsbay first
+	-In Karstbay - introduced to the idea of the cities running off renewable energy after an energy crisis in the past
+	-Antons Blacksmithery - Side quests to find materials for upgrading weapon and shield
+		-First level items - found in Kartsbay
+		-Second level items - found in Second cities
+		-Third level items - found in Boss areas
+		-Fourth level itmes - found in Puzzle area
+	-~6 more sidequests
+-Travel to first city
+	-Laharva -
+	-Arbelle -
+	-Graben -
+	-Mesetra -
+	-Corallos -

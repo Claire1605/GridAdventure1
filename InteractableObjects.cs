@@ -134,9 +134,6 @@ namespace GridAdventure1
         enum ComputerGraftingState { MainMenu, Weapons, Meebas, Exit}
         ComputerGraftingState currentComputerGraftingState = ComputerGraftingState.MainMenu;
 
-        //enum ComputerMusicState { MainMenu, Exit }
-        //ComputerMusicState currentComputerMusicState = ComputerMusicState.MainMenu;
-
         enum ComputerDNAState { MainMenu, Dollogrid, Items, DNA, Exit }
         ComputerDNAState currentComputerDNAState = ComputerDNAState.MainMenu;
      
@@ -219,7 +216,6 @@ namespace GridAdventure1
                     case ComputerMenuState.MainMenu:
                         currentComputerGraftingState = ComputerGraftingState.MainMenu;
                         currentComputerDNAState = ComputerDNAState.MainMenu;
-                        //currentComputerMusicState = ComputerMusicState.MainMenu;
                         Console.Clear();
                         message = "PLEASE CHOOSE FROM THE FOLLOWING OPTIONS: \n1: DIGITAL STORAGE \n2: GRAFTING \n3: DNA \n";
                          for (int i = 0; i < message.Length; i++)
@@ -246,8 +242,6 @@ namespace GridAdventure1
                             currentComputerMenuState = ComputerMenuState.Grafting;
                         else if (computerInput == "3" || computerInput == "dna".ToLower())
                             currentComputerMenuState = ComputerMenuState.DNA;
-                        //else if (computerInput == "4" || computerInput == "music".ToLower())
-                        //    currentComputerMenuState = ComputerMenuState.Music;
                         else if (computerInput == "exit")
                         {
                             message = "GOODBYE\n";
@@ -1458,157 +1452,6 @@ namespace GridAdventure1
 
                         currentComputerMenuState = ComputerMenuState.MainMenu;
                         break;
-
-                    //case ComputerMenuState.Music:
-                    //    int beepFreq = 0;
-                    //    int beepDur = 0;
-                    //    string tempTrack;
-                    //    string track1 = "";
-                    //    string track2 = "2en4,2d#4,2en4,2d#4,2en4,1bn4,2dn4,2cn4,1an2,1cn4,1en4,1an4,1bn2,1en4,1an4,1bn4,2cn2,2en4,2d#4,2en4,2d#4,2en4,1bn4,2dn4,2cn4,1an2,1cn4,1en4,1an4,1bn2,1en4,2cn4,1bn4,1an2,1bn4,2cn4,2dn4,2en2,2gn4,2fn4,2en4,2dn2,2en4,2en4,2dn4,2cn2,2en4,2dn4,2cn4,1bn2";
-                    //    string track3 = "1a#2,1fn1,1a#4,1a#8,2cn8,2dn8,2d#8,2fn1,2fn8,2fn4,2f#4,2g#4,2a#1,2a#8,2a#4,2g#4,2f#4,2g#4,2f#8,2fn1,2fn2,2d#4,2d#8,2fn4,2f#1,2fn4,2d#4,2c#4,2c#8,2d#4,2fn1,2d#4,2c#4,2cn4,2dn8,2en1,2gn2,2fn4,1fn8,1fn8,1fn4,1fn8,1fn8,1fn4,1fn4,1fn4";
-                    //    string test = "2gn2,2en2,2cn2,1gn2,1an4,1bn4,2cn4,1an2,2cn4,1gn1,2dn2,2gn2,2en2,2cn2,1an4,1bn4,2cn4,2dn2,2en4,2dn1,2en4,2fn4,2en4,2dn4,2gn2,2en4,2dn4,2cn1,2dn4,2en2,2cn4,1an4,2cn4,1an4,1gn1,1gn4,2cn2,2en4,2dn2,1gn4,2cn2,2en4,2dn2,2en4,2fn4,2gn4,2en4,2cn4,2dn2,1gn4,2cn1";
-                    //    string musicInput = "";
-
-                    //     List<int> musicLengths = new List<int>();
-                    //     List<int> musicNotes = new List<int>();
-
-                    //     List<int> savedMusicLengths = new List<int>();
-                    //     List<int> savedMusicNotes = new List<int>();
-                    //    do
-                    //    {
-                    //        message = "Write the music to play!\n";
-                    //        for (int j = 0; j < message.Length; j++)
-                    //        {
-                    //            Console.Write(message[j]);
-                    //            Thread.Sleep(game.textSpeed);
-                    //        }
-                    //        Thread.Sleep(800);
-                    //        tempTrack = musicInput;
-                    //        Console.Write("> ");
-                    //        musicInput = Console.ReadLine().ToLower().Trim();
-                    //        if (musicInput == "exit".ToLower())
-                    //        {
-                    //            currentComputerMusicState = ComputerMusicState.Exit;
-                    //            currentComputerMenuState = ComputerMenuState.MainMenu;
-                    //            break;
-                    //        }
-                    //        if (musicInput == "track1".ToLower())
-                    //            musicInput = track1;
-                    //        if (musicInput == "track2".ToLower())
-                    //            musicInput = track2;
-                    //        if (musicInput == "track3".ToLower())
-                    //            musicInput = track3;
-                    //        if (musicInput == "test".ToLower())
-                    //            musicInput = test;
-                    //        if (musicInput == "save".ToLower())
-                    //            track1 = tempTrack;
-                    //        string musicSubStringLength = "";
-                    //        string musicSubStringNote ="";
-                    //        musicLengths.Clear();
-                    //        musicNotes.Clear();
-                    //        for (int i = 0; i < musicInput.Length; i+=5)
-                    //        {
-                    //            if (musicInput.Length < 4)
-                    //            {
-                    //                message = "MUSIC NOT IN CORRECT FORMAT\n";
-                    //                for (int j = 0; j < message.Length; j++)
-                    //                {
-                    //                    Console.Write(message[j]);
-                    //                    Thread.Sleep(game.textSpeed);
-                    //                }
-                    //                break;
-                    //            }
-                    //            musicSubStringLength = musicInput.Substring(i + 3, 1);
-                    //            musicSubStringNote = musicInput.Substring(i, 3);
-                    //            if (musicSubStringLength == "1")
-                    //                beepDur = 1000; //semibreve
-                    //            else if (musicSubStringLength == "2")
-                    //                beepDur = 500; //minim
-                    //            else if (musicSubStringLength == "4")
-                    //                beepDur = 250; //crotchet
-                    //            else if (musicSubStringLength == "8")
-                    //                beepDur = 125; //quaver 
-                    //            else if (musicInput != "save" && musicInput != "track1" && musicInput != "track2" && musicInput != "track3")
-                    //            {
-                    //                message = "MUSIC NOT IN CORRECT FORMAT\n";
-                    //                for (int j = 0; j < message.Length; j++)
-                    //                {
-                    //                    Console.Write(message[j]);
-                    //                    Thread.Sleep(game.textSpeed);
-                    //                }
-                    //                break;
-                    //            }
-                    //            if (musicSubStringNote == "1Cn".ToLower())
-                    //                beepFreq = 262;
-                    //            else if (musicSubStringNote == "1C#".ToLower())
-                    //                beepFreq = 277;
-                    //            else if (musicSubStringNote == "1Dn".ToLower())
-                    //                beepFreq = 294;
-                    //            else if (musicSubStringNote == "1D#".ToLower())
-                    //                beepFreq = 311;
-                    //            else if (musicSubStringNote == "1En".ToLower())
-                    //                beepFreq = 330;
-                    //            else if (musicSubStringNote == "1Fn".ToLower())
-                    //                beepFreq = 349;
-                    //            else if (musicSubStringNote == "1F#".ToLower())
-                    //                beepFreq = 370;
-                    //            else if (musicSubStringNote == "1Gn".ToLower())
-                    //                beepFreq = 392;
-                    //            else if (musicSubStringNote == "1G#".ToLower())
-                    //                beepFreq = 415;
-                    //            else if (musicSubStringNote == "1An".ToLower())
-                    //                beepFreq = 440;
-                    //            else if (musicSubStringNote == "1A#".ToLower())
-                    //                beepFreq = 466;
-                    //            else if (musicSubStringNote == "1Bn".ToLower())
-                    //                beepFreq = 494;
-                    //            else if (musicSubStringNote == "2Cn".ToLower())
-                    //                beepFreq = 523;
-                    //            else if (musicSubStringNote == "2C#".ToLower())
-                    //                beepFreq = 554;
-                    //            else if (musicSubStringNote == "2Dn".ToLower())
-                    //                beepFreq = 587;
-                    //            else if (musicSubStringNote == "2D#".ToLower())
-                    //                beepFreq = 621;
-                    //            else if (musicSubStringNote == "2En".ToLower())
-                    //                beepFreq = 658;
-                    //            else if (musicSubStringNote == "2Fn".ToLower())
-                    //                beepFreq = 697;
-                    //            else if (musicSubStringNote == "2F#".ToLower())
-                    //                beepFreq = 738;
-                    //            else if (musicSubStringNote == "2Gn".ToLower())
-                    //                beepFreq = 782;
-                    //            else if (musicSubStringNote == "2G#".ToLower())
-                    //                beepFreq = 829;
-                    //            else if (musicSubStringNote == "2An".ToLower())
-                    //                beepFreq = 878;
-                    //            else if (musicSubStringNote == "2A#".ToLower())
-                    //                beepFreq = 930;
-                    //            else if (musicSubStringNote == "2Bn".ToLower())
-                    //                beepFreq = 985;
-                    //            else
-                    //            {
-                    //                message = "MUSIC NOT IN CORRECT FORMAT\n";
-                    //                for (int j = 0; j < message.Length; j++)
-                    //                {
-                    //                    Console.Write(message[j]);
-                    //                    Thread.Sleep(game.textSpeed);
-                    //                }
-                    //                break;
-                    //            }
-
-
-                    //            musicLengths.Add(beepDur);
-                    //            musicNotes.Add(beepFreq);
-                    //        }
-                    //        Thread.Sleep(400);
-                    //        for (int i = 0; i < musicNotes.Count; i++)
-                    //        {
-                    //            Console.Beep(musicNotes[i], musicLengths[i]);
-                    //        }
-
-                    //    } while (currentComputerMusicState != ComputerMusicState.Exit);
-                    //    break;
                     case ComputerMenuState.Exit:
                         currentComputerMenuState = ComputerMenuState.MainMenu;
                         break;

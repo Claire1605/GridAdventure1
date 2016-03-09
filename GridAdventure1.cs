@@ -1022,7 +1022,7 @@ namespace GridAdventure1
                 Console.Title = "CURRENT LOCATION: " + WorldMapCells[CurrentMap][CurrentLocation].mapName.ToUpper() + " - " + WorldMapCells[CurrentMap][CurrentLocation].cellName.ToUpper();
                 Console.BackgroundColor = backgroundColour; //updates colours after battles, exiting menus etc.
                 Console.ForegroundColor = foregroundColour;
-                
+
 
                 if (playerStats.playerCurrentHP > playerStats.playerMaxHP) //makes sure currentHP never goes above maxHP
                     playerStats.playerCurrentHP = playerStats.playerMaxHP;
@@ -1048,12 +1048,88 @@ namespace GridAdventure1
                     userValue = userValue.Remove(80);
                 }
 
+                //MAP TESTING - put in map class and instantiate in main game
+                WorldMap[] RiftonMapTest = new WorldMap[100]; //creates Rifton Map array
+
+                string line;
+                FileStream aFile = new FileStream("Maps.csv", FileMode.Open);
+                StreamReader sr = new StreamReader(aFile);
+                // read data in line by line
+                while ((line = sr.ReadLine()) != null)
+                {
+                    line = sr.ReadLine();//start after first row..
+                    for (int i = 0; i < 100; i++) // for each of the 100 grid cells...
+                    {
+                        RiftonMapTest[i] = new WorldMap(); //instantiate the cell
+                        string[] array = line.Split(',');
+                        RiftonMapTest[i].mapName = array[0];
+                        RiftonMapTest[i].mapLocation = Convert.ToInt16(array[1]);
+                        RiftonMapTest[i].mapAccessible = Convert.ToBoolean(array[2]);
+                        RiftonMapTest[i].mapVisited = Convert.ToBoolean(array[3]);
+                        RiftonMapTest[i].encounterRate = Convert.ToInt16(array[4]);
+                        RiftonMapTest[i].cellName = array[5];
+                        RiftonMapTest[i].cellLocation = Convert.ToInt16(array[6]);
+                        RiftonMapTest[i].accessible = Convert.ToBoolean(array[7]);
+                        RiftonMapTest[i].visited = Convert.ToBoolean(array[8]); //cannot be empty
+                        RiftonMapTest[i].firstVisit = Convert.ToBoolean(array[9]);
+                        RiftonMapTest[i].visitNumber = Convert.ToInt16(array[10]);
+                        RiftonMapTest[i].draw = Convert.ToBoolean(array[11]);
+                        RiftonMapTest[i].gridDescNumber = Convert.ToInt16(array[12]);
+                        RiftonMapTest[i].gridDescription = array[13];
+                        RiftonMapTest[i].look = array[14].Split(':');
+                        RiftonMapTest[i].userValueGridDescL2 = array[15]; //regex for gridDescriptionLevel2
+                        if (array[15] != "")
+                        {
+                            string[] regexSplit = array[15].Split(':');
+                            RiftonMapTest[i].regexDeeperLookItems = "@";
+                            foreach (var item in regexSplit)
+                            {
+                                RiftonMapTest[i].userValueGridDescL2 += "\b" + item + "\b|";
+                            }
+                            RiftonMapTest[i].userValueGridDescL2 = RiftonMapTest[i].userValueGridDescL2.Remove(RiftonMapTest[i].userValueGridDescL2.Length - 2);
+                        }
+                        RiftonMapTest[i].gridDescriptionLevel2 = array[16];
+                        RiftonMapTest[i].gridItemsLevel2 = array[17].Split(':').ToList();
+                        if (array[18] != "")
+                            RiftonMapTest[i].deeperLook = array[18].Split(':').Select(part => part.Split('_')).ToDictionary(sp => sp[0], sp => sp[1]); //test!!
+                        RiftonMapTest[i].regexDeeperLookItems = "";
+                        if (array[19] != "")
+                        {
+                            string[] regexSplit = array[19].Split(':');
+                            RiftonMapTest[i].regexDeeperLookItems = "@";
+                            foreach (var item in regexSplit)
+                            {
+                                RiftonMapTest[i].regexDeeperLookItems += "\b" + item + "\b|";
+                            }
+                            RiftonMapTest[i].regexDeeperLookItems = RiftonMapTest[i].regexDeeperLookItems.Remove(RiftonMapTest[i].regexDeeperLookItems.Length-2);
+                        }
+                        RiftonMapTest[i].digItems = array[20].Split(':').ToList();
+                        RiftonMapTest[i].secondLook = Convert.ToBoolean(array[21]);
+                        RiftonMapTest[i].gridItems = array[22].Split(':').ToList();
+                        RiftonMapTest[i].Gateway = Convert.ToBoolean(array[23]);
+                        RiftonMapTest[i].newMap = Convert.ToInt16(array[24]);
+                        RiftonMapTest[i].newLocation = Convert.ToInt16(array[25]);
+                        RiftonMapTest[i].torchVisible = Convert.ToBoolean(array[26]);
+                        RiftonMapTest[i].cave = Convert.ToBoolean(array[27]);
+                        RiftonMapTest[i].boatUpperDeck = Convert.ToBoolean(array[28]);
+                        RiftonMapTest[i].boatMiddleDeck = Convert.ToBoolean(array[29]);
+                        RiftonMapTest[i].boatLowerDeck = Convert.ToBoolean(array[30]);
+                        RiftonMapTest[i].ellondite = Convert.ToBoolean(array[31]);
+                        RiftonMapTest[i].shop = Convert.ToBoolean(array[32]);
+
+                        //Console.WriteLine(line);
+                        line = sr.ReadLine();
+                    }
+                }
+                sr.Close();
+
                 if (playerStats.playerLevel >= 5) //allotment side-quest
                     WorldMapCells[0][35].gridDescNumber = 3;
                 if (playerStats.playerLevel >= 10)
                 {
                     WorldMapCells[0][35].gridDescNumber = 4;
-                    WorldMapCells[0][35].digItemsAvailable = true;
+                    WorldMapCells[0][35].digItems.Add("tiny parsnip"); //CHANGE
+                   // WorldMapCells[0][35].digItemsAvailable = true;
                 }
 
                 //Testing
@@ -1230,7 +1306,7 @@ namespace GridAdventure1
                     Console.ForegroundColor = foregroundColour;
                     WriteLineText("You dug at the ground with the pickaxe...");
                     Thread.Sleep(1000);
-                    if (WorldMapCells[CurrentMap][CurrentLocation].digItemsAvailable == true)
+                    if (!WorldMapCells[CurrentMap][CurrentLocation].digItems.Contains(""))
                     {
                         if (inventory.dictionary.Count < 20)
                         {
@@ -1244,7 +1320,7 @@ namespace GridAdventure1
                                     inventory.dictionary.Add(item, 1);
                             }
                             WorldMapCells[CurrentMap][CurrentLocation].digItems.Clear();
-                            WorldMapCells[CurrentMap][CurrentLocation].digItemsAvailable = false;
+                            //WorldMapCells[CurrentMap][CurrentLocation].digItemsAvailable = false;
                             if (WorldMapCells[CurrentMap][CurrentLocation].mapLocation == 13 && WorldMapCells[CurrentMap][CurrentLocation].cellLocation == 26 && storyCounter == 5)
                                 storyCounter = 6;
                         }
@@ -3286,17 +3362,17 @@ namespace GridAdventure1
             WriteLineText("\nYou are " + WorldMapCells[CurrentMap][CurrentLocation].cellName);
             WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].gridDescription);
             if (WorldMapCells[CurrentMap][CurrentLocation].gridDescNumber == 1)
-                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look);
+                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look[0]);
             else if (WorldMapCells[CurrentMap][CurrentLocation].gridDescNumber == 2)
-                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look2);
+                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look[1]);
             else if (WorldMapCells[CurrentMap][CurrentLocation].gridDescNumber == 3)
-                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look3);
+                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look[2]);
             else if (WorldMapCells[CurrentMap][CurrentLocation].gridDescNumber == 4)
-                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look4);
+                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look[3]);
             else if (WorldMapCells[CurrentMap][CurrentLocation].gridDescNumber == 5)
-                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look5);
+                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look[4]);
             else if (WorldMapCells[CurrentMap][CurrentLocation].gridDescNumber == 6)
-                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look6);
+                WriteLineText(WorldMapCells[CurrentMap][CurrentLocation].look[5]);
             for (int i = 0; i < 100; i++)
             {
                 if (WorldMapCells[CurrentMap][i].cellLocation == CurrentLocation && !WorldMapCells[CurrentMap][CurrentLocation].gridItems.All(e => e == ""))

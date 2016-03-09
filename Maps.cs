@@ -23,12 +23,13 @@ namespace GridAdventure1
         public bool draw = true;
         public int gridDescNumber = 1;
         public string gridDescription = "";
-        public string look = "";
-        public string look2 = ""; //used for permanent changes to a location e.g. waterfall being diverted - quest related.
-        public string look3 = "";
-        public string look4 = "";
-        public string look5 = "";
-        public string look6 = "";
+        public string[] look = new string[6] { "", "", "", "", "", "" };
+        //public string look = "";
+        //public string look2 = ""; //used for permanent changes to a location e.g. waterfall being diverted - quest related.
+        //public string look3 = "";
+        //public string look4 = "";
+        //public string look5 = "";
+        //public string look6 = "";
         public string userValueGridDescL2 = ""; //regex phrases for looking at second level/take newer items - use for hidden items
         public string gridDescriptionLevel2 = ""; //used for hidden items/items not apparent from first 'look'
         public List<string> gridItemsLevel2 = new List<string>() { "" };
@@ -46,9 +47,9 @@ namespace GridAdventure1
         public bool boatUpperDeck;
         public bool boatMiddleDeck;
         public bool boatLowerDeck;
-        public Dictionary<string, object> interactableObjects;
+        //public Dictionary<string, object> interactableObjects;
         public bool ellondite;
-        public bool digItemsAvailable;
+        //public bool digItemsAvailable;
         public bool shop = false;
     }
 
@@ -104,12 +105,15 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the South is a path.";
-            look = "The renowned scientist, Rufus Digby, is standing by a large computer system. \nHis assistant, Dr. Tanaka is using a complex machine in the corner.";
+            look[0] = "The renowned scientist, Rufus Digby, is standing by a large computer system. \nHis assistant, Dr. Tanaka is using a complex machine in the corner.";
             gridItems = new List<string> { "" };
-            regexDeeperLookItems = @"\bcoffee\b|\bchemicals\b|\bmachine\b";
-            deeperLook.Add("coffee", "You feel a little more alert.");
-            deeperLook.Add("chemical", "You decide it's unwise to go near the hazardous chemicals.");
-            deeperLook.Add("machine", "The machine Dr.Tanaka is using is a DNA sequencer. You remember reading about her revolutionary work using this machine.");
+            regexDeeperLookItems = @"\bcoffee\b|\bchemical\b|\bmachine\b";
+            deeperLook = new Dictionary<string, string>
+            {
+                { "coffee", "You feel a little more alert."},
+            { "chemical", "You decide it's unwise to go near the hazardous chemicals."},
+            { "machine", "The machine Dr.Tanaka is using is a DNA sequencer. You remember reading about her revolutionary work using this machine." }
+            };
         }
     }
     public class RiftonMap5 : RiftonMap
@@ -176,10 +180,14 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the West is Rifton Cave. To the South is the Weapons Shop.";
-            look = "Two local miners, Guto and Bart, are sitting at a table covered by a complicated geological atlas and talking to each other.";
+            look[0] = "Two local miners, Guto and Bart, are sitting at a table covered by a complicated geological atlas and talking to each other.";
             gridItems = new List<string> { "flashlight", "" };
             regexDeeperLookItems = @"\batlas\b";
-            deeperLook.Add("atlas", "The atlas shows the geology of the local area.\nFrom the key you can see that the island Rifton is situated on is formed from sandstone, with an intrusion of igneous rock underneath Rifton caves and another on Rifton beach.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "atlas", "The atlas shows the geology of the local area.\nFrom the key you can see that the island Rifton is situated on is formed from sandstone, with an intrusion of igneous rock underneath Rifton caves and another on Rifton beach." }
+            };
+            //deeperLook.Add("atlas", "The atlas shows the geology of the local area.\nFrom the key you can see that the island Rifton is situated on is formed from sandstone, with an intrusion of igneous rock underneath Rifton caves and another on Rifton beach.");
 
         }
     }
@@ -201,12 +209,13 @@ namespace GridAdventure1
             visited = false;
             gridDescNumber = 1;
             gridDescription = "To the East is a path.";
-            look = "Inside the library is a maze of books, some which cover topics you have studied and others with seemingly indecipherable names.\nThere are several people reading, who don't look like they wish to be disturbed.A receptionist is sitting at the front desk typing at the computer.";
-            look2 = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nAn elderly man with a straw hat is reading a book about fertilser and its effects on crop yield.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.\nA man with oiled hair and wearing a suit is reading a complex book on biology.";
-            look3 = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nAn elderly man with a straw hat is reading a book about fertilser and its effects on crop yield.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.";
-            look4 = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.";
-            look5 = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nAn elderly man with a straw hat is reading a book about fertilser and its effects on crop yield.";
-            look6 = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.\nA man with oiled hair and wearing a suit is reading a complex book on biology.";
+
+            look[0] = "Inside the library is a maze of books, some which cover topics you have studied and others with seemingly indecipherable names.\nThere are several people reading, who don't look like they wish to be disturbed.A receptionist is sitting at the front desk typing at the computer.";
+            look[1] = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nAn elderly man with a straw hat is reading a book about fertilser and its effects on crop yield.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.\nA man with oiled hair and wearing a suit is reading a complex book on biology.";
+            look[2] = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nAn elderly man with a straw hat is reading a book about fertilser and its effects on crop yield.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.";
+            look[3] = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.";
+            look[4] = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nAn elderly man with a straw hat is reading a book about fertilser and its effects on crop yield.";
+            look[5] = "Inside the library is a maze of books. Walls are hidden behind endless tomes.\nA woman with dark hair tied in a blue headscarf is reading a guidebook to Mesetra, a city far in the East.\nA man with oiled hair and wearing a suit is reading a complex book on biology.";
             userValueGridDescL2 = @"\bbrowse books\b|\bbooks\b|\blook at books\b|\bview books\b|\bbrowse shelves\b|\bshelves\b";
             gridDescriptionLevel2 = "You take a look at the books in the 'Most-Popular' section.";
             gridItems = new List<string> { "" };
@@ -223,11 +232,14 @@ namespace GridAdventure1
             visited = false;
             gridDescription = "To the North is the Lab. To the West is the Library. To the East is a small cottage. To the South is a cobbled path";
             gridItems = new List<string> { "" };
-            look = "You seem to be at the highest point in the village, aside from the canyon walls towering above you to your north, east, and west.\nWhen you look directly south, you can see the cliff walls decline and merge with the lowlands.\nFar in the distance you can just about see a glimpse of the ocean.";
+            look[0] = "You seem to be at the highest point in the village, aside from the canyon walls towering above you to your north, east, and west.\nWhen you look directly south, you can see the cliff walls decline and merge with the lowlands.\nFar in the distance you can just about see a glimpse of the ocean.";
             regexDeeperLookItems = @"\bcanyon\b|\bocean\b|\blowlands\b";
-            deeperLook.Add("canyon", "Stratified rock extends towards the ocean on both sides of the canyon.");
-            deeperLook.Add("ocean", "What a lovely shade of blue.");
-            deeperLook.Add("lowlands", "You can see a forest and further down, a beach.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "canyon", "Stratified rock extends towards the ocean on both sides of the canyon." },
+                {"ocean", "What a lovely shade of blue." },
+                {"lowlands", "You can see a forest and further down, a beach." }
+            };
         }
     }
     public class RiftonMap15 : RiftonMap
@@ -239,11 +251,14 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the West is a path. To the South is Dr Tanaka's house.";
-            look = "Your computer is flashing with biological research. The walls are lined with shelves of books from your studies.\nYour room-mate, Vanya, is reading a newspaper at the kitchen table.";
+            look[0] = "Your computer is flashing with biological research. The walls are lined with shelves of books from your studies.\nYour room-mate, Vanya, is reading a newspaper at the kitchen table.";
             gridItems = new List<string> { "apple"};
             regexDeeperLookItems = @"\bshelves\b|\bnewspaper\b";
-            deeperLook.Add("shelves", "Dozens of books on biology and natural science are organised neatly, just as you left them.");
-            deeperLook.Add("newspaper", "The newspaper is open on an article about the energy market. The headline reads 'Is BioFuel the future of Terethia's energy needs?'");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "shelves", "Dozens of books on biology and natural science are organised neatly, just as you left them." },
+                { "newspaper", "The newspaper is open on an article about the energy market. The headline reads 'Is BioFuel the future of Terethia's energy needs?'" }
+            };
             userValueGridDescL2 = @"\bbooks\b|\bbook\b";
             gridDescriptionLevel2 = "You browse through your collection to see if there might be anything useful.";
             gridItemsLevel2 = new List<string> { "Rapid evolutionary radiations throughout history" };   
@@ -299,13 +314,16 @@ namespace GridAdventure1
             visited = false;
             shop = true;
             gridDescription = "To the South is a path";
-            look = "Inside the shop the wooden walls are covered with weapons in all shapes and sizes.\nSome look purely ornamental, while others look potentially lethal.\nA young woman is polishing a blade behind a counter towards the back of the shop.\n[To buy an item, type 'take' and then the item]";
+            look[0] = "Inside the shop the wooden walls are covered with weapons in all shapes and sizes.\nSome look purely ornamental, while others look potentially lethal.\nA young woman is polishing a blade behind a counter towards the back of the shop.\n[To buy an item, type 'take' and then the item]";
             userValueGridDescL2 = @"\brack\b|\b weapons rack\b|\bweapon rack\b";
             gridDescriptionLevel2 = "A wooden rack is situated near the door.";
             gridItemsLevel2 = new List<string> { "sword", "axe", "spear", "bow", "mace", "shield" };
             gridItems = new List<string> { "" };
-            regexDeeperLookItems = "\bweapons\b";
-            deeperLook.Add("weapons", "A selection of ornamental weapons from the Thian era with their distinctive red lacquered hilts is on display in the centre of the shop.");
+            regexDeeperLookItems = @"\bweapons\b";
+            deeperLook = new Dictionary<string, string>
+            {
+                { "weapons", "A selection of ornamental weapons from the Thian era with their distinctive red lacquered hilts is on display in the centre of the shop." }
+            };
         }
     }
     public class RiftonMap22 : RiftonMap
@@ -333,14 +351,12 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is a path. To the East is Dr.Tanaka's House. To the South is the Town Square";
-            look = "The cottage looks old and has a thatched roof. An apple tree is growing by the front entrance.\n The cottage overlooks Rifton lake to the west, which extends out towards a cliff face in the distance.\nThe door to the cottage does not appear to be locked.";
+            look[0] = "The cottage looks old and has a thatched roof. An apple tree is growing by the front entrance.\n The cottage overlooks Rifton lake to the west, which extends out towards a cliff face in the distance.\nThe door to the cottage does not appear to be locked.";
             regexDeeperLookItems = @"\bcat\b|\bstroke\b|\boutside\b|\btree\b|\blake\b|\bcliff\b";
-            deeperLook.Add("cat", "You look around the corner and see a fairly large cat lounging in the sunlight");
-            deeperLook.Add("stroke", "You stroke the cat, which rolls over onto its back and purrs");
-            deeperLook.Add("outside", "You walk outside the cottage.");
-            deeperLook.Add("tree", "It's the sort of tree you would have loved to have climbed as a child.");
-            deeperLook.Add("lake", "The lake looks so calm. This must be why the cottage is situated here.");
-            deeperLook.Add("cliff", "The village is surrounded by steep Sandstone cliffs that make up the canyon.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "cat", "You look around the corner and see a fairly large cat lounging in the sunlight" }, { "stroke", "You stroke the cat, which rolls over onto its back and purrs" }, { "outside", "You walk outside the cottage." }, { "tree", "It's the sort of tree you would have loved to have climbed as a child." }, { "lake", "The lake looks so calm. This must be why the cottage is situated here." }, { "cliff", "The village is surrounded by steep Sandstone cliffs that make up the canyon." }
+            };
             gridItems = new List<string> { "apple", "apple", "apple"};
             userValueGridDescL2 = @"\bdoor\b|\bopen\b|\bknock\b|\binside\b|\bin\b|\benter\b";
             gridDescriptionLevel2 = "You open the door. Inside is a quaintly decorated room. \nPhotographs of Rifton and various people from decades ago cover the walls.\nAn elderly woman is knitting in a corner.";//inside house
@@ -355,11 +371,13 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is your house. To the West is a small cottage. To the South is an allotment";
-            look = "The house is painted pale terracotta and is surrounded by small shrubs.\nThe front door is locked.";
+            look[0] = "The house is painted pale terracotta and is surrounded by small shrubs.\nThe front door is locked.";
             gridItems = new List<string> { "" };
             regexDeeperLookItems = @"\byellow flowers\b|\bshrub\b";
-            deeperLook.Add("yellow flowers", "The flowers are unlike those grown locally, someone must have spent a lot of time caring for them.");
-            deeperLook.Add("shrub", "Ouch! It's prickly.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "yellow flowers", "The flowers are unlike those grown locally, someone must have spent a lot of time caring for them." }, { "shrub", "Ouch! It's prickly." }
+            };
         }
     }
     public class RiftonMap26 : RiftonMap
@@ -404,10 +422,12 @@ namespace GridAdventure1
             visited = false;
             shop = true;
             gridDescription = "To the East is a path";
-            look = "The shop is quite small and sells groceries and clothes. A shopkeeper is chatting with a customer near the till.\n[To buy an item, type 'take' and then the item]";
+            look[0] = "The shop is quite small and sells groceries and clothes. A shopkeeper is chatting with a customer near the till.\n[To buy an item, type 'take' and then the item]";
             regexDeeperLookItems = @"\bcustomer\b|\btill\b";
-            deeperLook.Add("customer", "One customer is flirting fairly obviously with the shopkeeper, who seems to be enjoying it.");
-            deeperLook.Add("till", "A voice of reason tells you to stay away from this");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "customer", "One customer is flirting fairly obviously with the shopkeeper, who seems to be enjoying it."}, { "till", "A voice of reason tells you to stay away from this" }
+            };
             gridItems = new List<string> { "" };
             userValueGridDescL2 = @"\bitems\b|\bstock\b|\bmerch\b|\bgroceries\b|\bclothes\b|\bsell\b";
             gridDescriptionLevel2 = "The shop has a few items which look they could be useful.";
@@ -423,7 +443,7 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is a Weapons Shop. To the West is a local shop. \nTo the East is a Bridge";
-            look = "To your south you can see the canyon drop off steeply towards the sea.\nThere is a forest sloping down as the landscape shallows.";
+            look[0] = "To your south you can see the canyon drop off steeply towards the sea.\nThere is a forest sloping down as the landscape shallows.";
             gridItems = new List<string> { "" };
         }
     }
@@ -436,16 +456,12 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the West is a path. To the East is a path";
-            look = "The bridge is surrounded by bushes, and twigs litter the ground.\nThe view to the north is of the lake that Rifton is built around. A waterfall falls from over the top of the canyon in the distance. To the south the lake continues before it reaches another waterfall descending through Rifton forest.";
+            look[0] = "The bridge is surrounded by bushes, and twigs litter the ground.\nThe view to the north is of the lake that Rifton is built around. A waterfall falls from over the top of the canyon in the distance. To the south the lake continues before it reaches another waterfall descending through Rifton forest.";
             regexDeeperLookItems = @"\bbridge\b|\btwig\b|\bbush\b|\bbushes\b|\bjump\b|\blake\b|\bwaterfall\b|\bcanyon\b";
-            deeperLook.Add("bridge", "The bridge is made from wooden planks and is beginning to rot in places along the railings.");
-            deeperLook.Add("twig", "You throw a twig into the water over the northern side of the bridge, then turn to watch it float past on the southern side.\nYou watch it fall over the waterfall further south");
-            deeperLook.Add("bushes", "They look very prickly.");
-            deeperLook.Add("bush", "They look very prickly.");
-            deeperLook.Add("jump", "You feel a sudden urge to jump in the lake, and ... *splash!* ... well now you're all wet.");
-            deeperLook.Add("lake", "The lake looks enticingly cool");
-            deeperLook.Add("waterfall", "You are on a plateau between two waterfalls, one to the north and one to the south.\nIs that something behind the waterfall to the north?");
-            deeperLook.Add("canyon", "Stratified rock extends towards the ocean on both sides of the canyon.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "bridge", "The bridge is made from wooden planks and is beginning to rot in places along the railings." }, { "twig", "You throw a twig into the water over the northern side of the bridge, then turn to watch it float past on the southern side.\nYou watch it fall over the waterfall further south" }, { "bushes", "They look very prickly."}, { "bush", "They look very prickly." }, { "jump", "You feel a sudden urge to jump in the lake, and ... *splash!* ... well now you're all wet." }, { "lake", "The lake looks enticingly cool" }, { "waterfall", "You are on a plateau between two waterfalls, one to the north and one to the south.\nIs that something behind the waterfall to the north?" }, {"canyon", "Stratified rock extends towards the ocean on both sides of the canyon." }
+            };
             gridItems = new List<string> { "stick" };
         }
     }
@@ -458,11 +474,12 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the West is a Bridge. To the East is the Town Square. To the South is the West Park";
-            look = "Small houses and fences create the alley either side of you.";
+            look[0] = "Small houses and fences create the alley either side of you.";
             regexDeeperLookItems = @"\bhouse\b|\balley\b|\bstreetlamp\b";
-            deeperLook.Add("house", "There are rows of quaint cottages that look like they were built a long time ago.");
-            deeperLook.Add("alley", "The alley is narrow and littered with leaves. Two streetlamps stand unlit either side of you.");
-            deeperLook.Add("streetlamp", "The lamps need to be lit manually, someone must light them every evening.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "house", "There are rows of quaint cottages that look like they were built a long time ago." }, { "alley", "The alley is narrow and littered with leaves. Two streetlamps stand unlit either side of you." }, { "streetlamp", "The lamps need to be lit manually, someone must light them every evening." }
+            };
             gridItems = new List<string> { "" };
         }
     }
@@ -475,10 +492,13 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is a path. To the East is an allotment. To the West is a path. To the South is the East Park";
-            look = "You are standing in a paved courtyard surrounded by houses and green spaces. A small fountain is in the centre of the paved area. A young man and woman are sitting on a bench next to it.";
+            look[0] = "You are standing in a paved courtyard surrounded by houses and green spaces. A small fountain is in the centre of the paved area. A young man and woman are sitting on a bench next to it.";
             gridItems = new List<string> { "" };
             regexDeeperLookItems = @"\bfountain\b";
-            deeperLook.Add("fountain", "The fountain appears to be solar powered. There are several coins in the basin.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "fountain", "The fountain appears to be solar powered. There are several coins in the basin." }
+            };
         }
     }
     public class RiftonMap35 : RiftonMap //find seed somewhere to plant here? - CHANGE, maybe after plants are fully grown you could be given a plot of land to grow things
@@ -490,14 +510,17 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is Dr Tanaka's House. To the West is the Town Square";
-            look = "There are several plots of land that look like plants grew on them once.";
-            look2 = "The soil has recently been ploughed, it looks like plants could grow here soon.";
-            look3 = "Plants are beginning to sprout, how exciting!";
-            look4 = "Several vegetable plots are in full bloom. You can see carrots, onions, beans and potatoes. Maybe you could dig up a few vegetables for yourself.";
+            look[0] = "There are several plots of land that look like plants grew on them once.";
+            look[1] = "The soil has recently been ploughed, it looks like plants could grow here soon.";
+            look[2] = "Plants are beginning to sprout, how exciting!";
+            look[3] = "Several vegetable plots are in full bloom. You can see carrots, onions, beans and potatoes. Maybe you could dig up a few vegetables for yourself.";
             gridItems = new List<string> { "tiny parsnip" };
             digItems = new List<string> { "carrot", "onion", "potato", "beans" };
             regexDeeperLookItems = @"\bplot\b";
-            deeperLook.Add("plot", "There are several plots of soil with numbered signs in front. It looks like most people in the village use this allotment");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "plot", "There are several plots of soil with numbered signs in front. It looks like most people in the village use this allotment" }
+            };
         }
     }
     public class RiftonMap36 : RiftonMap
@@ -565,7 +588,7 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is a path. To the East is the East Park.";
-            look = "A wooden hut is set up underneath the shade of a tree. A drinks vendor is standing inside preparing drinks.";
+            look[0] = "A wooden hut is set up underneath the shade of a tree. A drinks vendor is standing inside preparing drinks.";
             gridItems = new List<string> { "" };
         }
     }
@@ -578,14 +601,13 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is the Town Square. To the West is the West Park. To the South is a Viewpoint";
-            look = "This side of the park is covered with large trees, creating a leafy canopy overhead that casts a green light on the area. One of the trees looks like it would be easy to climb if you were so inclined.";
-            look2 = "This side of the park is covered with large trees, creating a leafy canopy overhead that casts a green light on the area. The tree that you climbed stands in the centre of the park, dominating all the other trees.";
+            look[0] = "This side of the park is covered with large trees, creating a leafy canopy overhead that casts a green light on the area. One of the trees looks like it would be easy to climb if you were so inclined.";
+            look[1] = "This side of the park is covered with large trees, creating a leafy canopy overhead that casts a green light on the area. The tree that you climbed stands in the centre of the park, dominating all the other trees.";
             regexDeeperLookItems = @"\bclimb tree\b|\bcanopy\b|\bbranch\b|\breach\b|\bbark\b|\btreehouse\b";
-            deeperLook.Add("climb tree", "You walk over to the tree and begin climbing up the base of it. You feel a sense of adventure rush through you. Could you reach that branch just above you?");
-            deeperLook.Add("branch", "You made it! You're already so high above the ground but you think you could make it above the canopy, if you could just reach that protruding piece of bark...");
-            deeperLook.Add("reach", "You made it! You're already so high above the ground but you think you could make it above the canopy, if you could just reach that protruding piece of bark...");
-            deeperLook.Add("bark", "You use the bark to grab on to, and pull yourself up through the leaves of the canopy. You feel a sudden rush of wind past your face as you emerge above the trees. The view from this point is incredible; the canyon walls either side of you, the waterfall to your north and the ocean to the south, and... a treehouse next to you?");
-            deeperLook.Add("treehouse", "Just below the upper leaves of the tree you see a precariously-placed treehouse. You look inside, and on a small table is a key and a piece of paper.");
+            deeperLook = new Dictionary<string, string>
+            {
+                { "climb tree", "You walk over to the tree and begin climbing up the base of it. You feel a sense of adventure rush through you. Could you reach that branch just above you?" }, { "branch", "You made it! You're already so high above the ground but you think you could make it above the canopy, if you could just reach that protruding piece of bark..." }, { "reach", "You made it! You're already so high above the ground but you think you could make it above the canopy, if you could just reach that protruding piece of bark..." }, { "bark", "You use the bark to grab on to, and pull yourself up through the leaves of the canopy. You feel a sudden rush of wind past your face as you emerge above the trees. The view from this point is incredible; the canyon walls either side of you, the waterfall to your north and the ocean to the south, and... a treehouse next to you?" }, { "treehouse", "Just below the upper leaves of the tree you see a precariously-placed treehouse. You look inside, and on a small table is a key and a piece of paper." }
+            };
             gridItems = new List<string> { "" };
             userValueGridDescL2 = @"\btreehouse\b";
             gridItemsLevel2 = new List<string> { "key", "treehouse paper" };
@@ -1725,7 +1747,7 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the North is Rocky Path 7. To the South is the bottom of the waterfall, which leads down to the beach.\nYou are standing at the top of a steep waterfall. There is a route down but you'll need to be cautious.";
-            look2 = "To the North is Rocky Path 7. There is a waterfall here that has been diverted to the west due to a dam of heavy branches.";
+            look[0] = "There is a waterfall here that has been diverted to the west due to a dam of heavy branches.";
             gridItems = new List<string> { "", "" };
         }
     }
@@ -2940,7 +2962,7 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "To the East is a powerful waterfall, it looks like you could get to the other side if the flow was weakened at its source back in the forest.";
-            look2 = "To the East is a pond that a waterfall used to run into. There are rocky stepping stones across to the other side.";
+            look[0] = "To the East is a pond that a waterfall used to run into. There are rocky stepping stones across to the other side.";
             gridItems = new List<string> { "", "", };
         }
     }
@@ -2979,7 +3001,7 @@ namespace GridAdventure1
             gridDescription = "To the West is a rocky path. In the cliff face something shimmers, could it be ellondite?";
             digItems = new List<string> { "ellondite, ellondite" };
             gridItems = new List<string> { "", "", };
-            digItemsAvailable = true;
+            //digItemsAvailable = true;
             ellondite = true;
         }
     }
@@ -8095,7 +8117,7 @@ namespace GridAdventure1
             accessible = true;
             visited = false;
             gridDescription = "It appears to be a dead end. You can see the path extending back to the west";
-            digItemsAvailable = true;
+            //digItemsAvailable = true;
             digItems = new List<string> { "ellondite, ellondite" };
             gridItems = new List<string> { "", "", };
             ellondite = true;

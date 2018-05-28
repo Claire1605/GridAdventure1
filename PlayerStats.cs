@@ -12,7 +12,7 @@ namespace GridAdventure1
     {
         public double playerLevel = 1;
         public double playerCurrentExp = 0;
-        public int playerMoney = 500;
+        public int playerMoney = 15;
         public string name = "Red";
         public string favdrink = "milkshake";
         public string vertExpertise = "aves";

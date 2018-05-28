@@ -4,3 +4,10 @@ C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventu
 C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\GridAdventure1.csprojResolveAssemblyReference.cache
 C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\GridAdventure1.exe
 C:\Users\Claire\documents\visual studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\GridAdventure1.pdb
+C:\Users\Claire\Documents\Game Development\Visual Studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\DecayOfTerethia.exe.config
+C:\Users\Claire\Documents\Game Development\Visual Studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\DecayOfTerethia.exe
+C:\Users\Claire\Documents\Game Development\Visual Studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\DecayOfTerethia.pdb
+C:\Users\Claire\Documents\Game Development\Visual Studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\Newtonsoft.Json.dll
+C:\Users\Claire\Documents\Game Development\Visual Studio 2013\Projects\GridAdventure1\GridAdventure1\bin\Release\Newtonsoft.Json.xml
+C:\Users\Claire\Documents\Game Development\Visual Studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\DecayOfTerethia.exe
+C:\Users\Claire\Documents\Game Development\Visual Studio 2013\Projects\GridAdventure1\GridAdventure1\obj\Release\DecayOfTerethia.pdb

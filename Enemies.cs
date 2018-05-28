@@ -181,7 +181,7 @@ namespace GridAdventure1
             area = new List<string>() {"fire area 1", "fire area 2", "rifton beach"};
             itemDrop = new List<string>() { "flame gloop", "fire egg", "flint" };
             itemDropRate = 1;
-            money = 0;
+            money = 2;
             animation = new string[5, 8] 
                 {
                 {
@@ -3401,33 +3401,35 @@ namespace GridAdventure1
                 };
         }
     }
-    class Charcoal1b : Enemy
+    class Charcoal1b : Enemy //MINI BOSS BATTLE 1
     {
         public Charcoal1b()
         {
             name = "";
             names.Add("Bryofighter");
-            names.Add("Lich'n");
+            //names.Add("Lich'n");
             elementType = "Charcoal";
-            MaxHP = 12;
-            HP = 12;
-            strength = 8;
-            defense = 3;
-            speed = 2;
-            exp = 2;
-            hit = 60;
-            MaxMP = 20;
-            MP = 20;
+            MaxHP = 35;
+            HP = 35;
+            strength = 10;
+            defense = 8;
+            speed = 5;
+            exp = 20;
+            hit = 70;
+            MaxMP = 60;
+            MP = 60;
             lifeLeech = true;
             lifeLeechChance = 35; //%
             lifeLeechHeal = 15; //% total hp
             Moves.Clear();
             Moves.Add("Bio Acid");
             Moves.Add("Poison Spores");
+            Moves.Add("Tangleweed");
+            Moves.Add("Solar Flare");
             area = new List<string>() { "fire area 1", "plant area 1", "fire area 2", "plant area 2" };
             itemDrop = new List<string>() { "seed", "flame gloop", "flint" };
             itemDropRate = 1;
-            money = 0;
+            money = 50;
             animation = new string[5, 8] 
                 {
                 {

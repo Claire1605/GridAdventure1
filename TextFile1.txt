@@ -1,36 +1,20 @@
 ﻿//To do:
-	-working on squirrel quest - riftonmap44
 //Ongoing:
-	-Help menu - add all story counter points - 1 per story counter
-	-update quest log 
-	-all subsequent maps need newlocation updating
 	-add all item types to UseItem(), for outside battle, books etc.
 	-add all items to referenceCurrentItem
 	-item types - add all to playeritem and playerchoice! - battle
-	-remember to update visitorder places
-	-use shovel/dig - test allotment quest
 //Text/Story:
-	-change main character half way through, because why would a research biologist fight the evil corporation??
 	-up to prof fournier quests, need to continue from here, starting with splicing meeba second time
 		**-make it more obvious that there are side-quests, run through and also make sure main quests are easy to follow
 	-add more flavour text in regards to reusable energy
-//Map:
-	-hidden items e.g. exam fountain to get something, or in weapons shop manakin has chainmail/gloves
-	-Secret Area in Rifton Forest - key?
-	-maybe extend waterfall area upwards like in original mfc map
-	-fast-travel between cities later in game
+	-still need a better name for money
 //Items:
 	-item types e.g. healthgain - finalise these and add to battle
-	-better name for evostone - change this to expousre of meeba to the radiation, don't need to collect evostone, also don't need to use this is evolution!
-	-side-quests to collect items needed for modding item - anton's quests
-	-full heal items/poke centres/healing wells - more healing -poke centre, and thus enemies do more damage
 	-need healing items for status ailments
 	-more variety if items that people can give you/you can find - potions etc.
-	-maybe to simplify things - monsters just have to be exposed to the evostone area rather than collect a stone from it, then only need one item while evolving. also then makes sense why monsters would gather there, need to change DNA, detector, every instance of meteorite ..
-	-do i want all dig items to be dug all at once? or should they be randomised? think about ellondite and people potentially not collecting 2 of them - maybe i should only collect one sample and use it twice anyway
 	-check buy/sell values
+	-change weapons/armour to more intersting things like lab equipment
 //Battle
-	-New ascii animations for all enemies - probably once enemies have been solidified
 	-move descriptions to look at in menu?
 	-if statusprotect... - player items
 	-what items do i want to be able to use in battle?
@@ -44,8 +28,6 @@
 	-mini-bosses and bosses
 //Enemies:
 	-after testing - customise individual enemy stats a bit more
-//Save: 
-	-xml serialisation/json
 //NPCs:
 	-enemy namer guy, is ridiculous
 //Computer:
@@ -53,29 +35,7 @@
 	-dictionary of things such as item drops, moves etc.
 	-dollogrid colours need fixing - f1 ->f2 etc.
 	-give all writing more character/flavour, more ... etc.
-	-music, find books with ascii scores in - learn and save songs, does things? stat boost/encounter rate/opens secret places etc.
-	-music - find flutefly flute
 	-one qr code is actually a dungeon map
-	E.G. 
---------------------------------|
-  _
--|-|----------------------------|
-* * 
------|------------------------_-|
-    o                |       | |
---------------------*-------*-*-|
-   
---------------------------------|
-o    semibreve (1) - 32 spaces
-
- |
-o    minim (2) - 16 spaces
-
- |
-*    crotchet (4) - 8 spaces
-  _
- | |
-* *  quaver (8) - 4 spaces
 
 //player had been studying the monsters previously so knows their names?
 //charisma stat is apparently useless but important at some point, one monster that has really high snazziness and you can only beat him if you have higher, 'don't hate him because he's beautiful'
@@ -86,10 +46,8 @@ o    minim (2) - 16 spaces
  -sort out gateways in laharva etc.
 
 //Extras:
-//ascii person that shows items equipped?
 //boss with conversation tree - have to pick correct responses
 //easter eggs
-//drink pond water, jump in, swim, feed the ducks
 //item that takes you directly somewhere
 //straw should be a broken item, eat straw to become scarecrow
 //reference echo the dolphin, trident, aquaman, lobster king and lobsters inc. lobster bishop and crab popes and shrimp librarian, mega ape and retro ape

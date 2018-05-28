@@ -25,11 +25,11 @@ namespace GridAdventure1
         public int defense = 1;
         public int defenseBonus;
         public int currentDef;
-        public double hp = 50;
+        public double hp = 20;
         public int hpBonus;
-        public double currentHp = 50;
-        public int MP = 200;
-        public int currentMP = 200;
+        public double currentHp = 20;
+        public int MP = 30;
+        public int currentMP = 30;
         public int hitRange = 60;
         public int PyroclasticFlowCounter = 0;
         public bool lifeLeech = false;
@@ -139,11 +139,11 @@ namespace GridAdventure1
 
     }
 
-    public class FireTier1 : Meeba
+    public class Tinder : Meeba
     {
-        public FireTier1()
+        public Tinder()
         {
-            name = "FireTier1"; //obviously this will change
+            name = "Tinder Meeba"; //obviously this will change
             elementType = "fire";
             levelTier = 1;
             attackBonus = 9;
@@ -154,27 +154,14 @@ namespace GridAdventure1
             hitRange = 60;
             newMove = "Lava Bubble";
             moveDescription = "A small explosion of hot lava"; //CHANGE this should be in meebamoves class
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class FireTier2 : Meeba
+    public class Smoke : Meeba
     {
-        public FireTier2()
+        public Smoke()
         {
-            name = "FireTier2"; //obviously this will change
+            name = "Smoke Meeba"; //obviously this will change
             elementType = "fire";
             levelTier = 2;
             attackBonus = 20; 
@@ -184,27 +171,14 @@ namespace GridAdventure1
             MP = 80;
             hitRange = 70;
             newMove = "Phoenix Fire";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class FireTier3 : Meeba
+    public class Flame : Meeba
     {
-        public FireTier3()
+        public Flame()
         {
-            name = "FireTier3"; //obviously this will change
+            name = "Flame Meeba"; //obviously this will change
             elementType = "fire";
             levelTier = 3;
             attackBonus = 35;
@@ -214,27 +188,14 @@ namespace GridAdventure1
             MP = 100;
             hitRange = 80;
             newMove = "Pyroclastic Flow";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class FireTier4 : Meeba
+    public class Infernus : Meeba
     {
-        public FireTier4()
+        public Infernus()
         {
-            name = "FireTier4"; //obviously this will change
+            name = "Infernus Meeba"; //obviously this will change
             elementType = "fire";
             levelTier = 4;
             attackBonus = 55;
@@ -244,27 +205,14 @@ namespace GridAdventure1
             MP = 120;
             hitRange = 90;
             newMove = "Inferno";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantTier1 : Meeba
+    public class Sprout : Meeba
     {
-        public PlantTier1()
+        public Sprout()
         {
-            name = "PlantTier1"; //obviously this will change
+            name = "Sprout Meeba"; //obviously this will change
             elementType = "plant";
             levelTier = 1;
             attackBonus = 2;
@@ -277,27 +225,14 @@ namespace GridAdventure1
             lifeLeechChance = 35; //%
             lifeLeechHeal = 15; //% total hp
             newMove = "Poison Spores";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantTier2 : Meeba
+    public class Grass : Meeba
     {
-        public PlantTier2()
+        public Grass()
         {
-            name = "PlantTier2"; //obviously this will change
+            name = "Grass Meeba"; //obviously this will change
             elementType = "plant";
             levelTier = 2;
             attackBonus = 6;
@@ -309,27 +244,14 @@ namespace GridAdventure1
             poisonOne = true;
             poisonChance = 35;
             newMove = "Tangleweed";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantTier3 : Meeba
+    public class Vine : Meeba
     {
-        public PlantTier3()
+        public Vine()
         {
-            name = "PlantTier3"; //obviously this will change
+            name = "Vine Meeba"; //obviously this will change
             elementType = "plant";
             levelTier = 3;
             attackBonus = 10;
@@ -342,27 +264,14 @@ namespace GridAdventure1
             lifeLeechChance = 35; //%
             lifeLeechHeal = 25; //% total hp
             newMove = "Slumber Dust";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantTier4 : Meeba
+    public class Forest : Meeba
     {
-        public PlantTier4()
+        public Forest()
         {
-            name = "PlantTier4"; //obviously this will change
+            name = "Forest Meeba"; //obviously this will change
             elementType = "plant";
             levelTier = 4;
             attackBonus = 15;
@@ -374,27 +283,14 @@ namespace GridAdventure1
             poisonTwo = true;
             poisonChance = 35;
             newMove = "Thron Grip";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthTier1 : Meeba
+    public class Soil : Meeba
     {
-        public EarthTier1()
+        public Soil()
         {
-            name = "EarthTier1"; //obviously this will change
+            name = "Soil Meeba"; //obviously this will change
             elementType = "earth";
             levelTier = 1;
             attackBonus = 2;
@@ -404,27 +300,14 @@ namespace GridAdventure1
             MP = 50;
             hitRange = 60;
             newMove = "Grainmail";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthTier2 : Meeba
+    public class Boulder : Meeba
     {
-        public EarthTier2()
+        public Boulder()
         {
-            name = "EarthTier2"; //obviously this will change
+            name = "Boulder Meeba"; //obviously this will change
             elementType = "earth";
             levelTier = 2;
             attackBonus = 6;
@@ -434,27 +317,14 @@ namespace GridAdventure1
             MP = 80;
             hitRange = 70;
             newMove = "Quake";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthTier3 : Meeba
+    public class Terra : Meeba
     {
-        public EarthTier3()
+        public Terra()
         {
-            name = "EarthTier3"; //obviously this will change
+            name = "Terra Meeba"; //obviously this will change
             elementType = "earth";
             levelTier = 3;
             attackBonus = 10;
@@ -464,27 +334,14 @@ namespace GridAdventure1
             MP = 100;
             hitRange = 80;
             newMove = "Sand Shroud";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthTier4 : Meeba
+    public class Mount : Meeba
     {
-        public EarthTier4()
+        public Mount()
         {
-            name = "EarthTier4"; //obviously this will change
+            name = "Mount Meeba"; //obviously this will change
             elementType = "earth";
             levelTier = 4;
             attackBonus = 15;
@@ -494,27 +351,14 @@ namespace GridAdventure1
             MP = 120;
             hitRange = 90;
             newMove = "Rock Fort";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirTier1 : Meeba
+    public class Breeze : Meeba
     {
-        public AirTier1()
+        public Breeze()
         {
-            name = "AirTier1"; //obviously this will change
+            name = "Breeze Meeba"; //obviously this will change
             elementType = "air";
             levelTier = 1;
             attackBonus = 2;
@@ -524,27 +368,14 @@ namespace GridAdventure1
             MP = 50;
             hitRange = 60;
             newMove = "Static Shock";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirTier2 : Meeba
+    public class Wind : Meeba
     {
-        public AirTier2()
+        public Wind()
         {
-            name = "AirTier2"; //obviously this will change
+            name = "Wind Meeba"; //obviously this will change
             elementType = "air";
             levelTier = 2;
             attackBonus = 6;
@@ -554,27 +385,14 @@ namespace GridAdventure1
             MP = 80;
             hitRange = 70;
             newMove = "Windstorm";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirTier3 : Meeba
+    public class Sky : Meeba
     {
-        public AirTier3()
+        public Sky()
         {
-            name = "AirTier3"; //obviously this will change
+            name = "Sky Meeba"; //obviously this will change
             elementType = "air";
             levelTier = 3;
             attackBonus = 10;
@@ -584,27 +402,14 @@ namespace GridAdventure1
             MP = 100;
             hitRange = 80;
             newMove = "Tailwind";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirTier4 : Meeba
+    public class Atmos : Meeba
     {
-        public AirTier4()
+        public Atmos()
         {
-            name = "AirTier4"; //obviously this will change
+            name = "Atmos Meeba"; //obviously this will change
             elementType = "air";
             levelTier = 4;
             attackBonus = 15;
@@ -614,27 +419,14 @@ namespace GridAdventure1
             MP = 120;
             hitRange = 90;
             newMove = "Cyclone";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class WaterTier1 : Meeba
+    public class Drop : Meeba
     {
-        public WaterTier1()
+        public Drop()
         {
-            name = "WaterTier1"; //obviously this will change
+            name = "Drop Meeba"; //obviously this will change
             elementType = "water";
             levelTier = 1;
             attackBonus = 2;
@@ -644,27 +436,14 @@ namespace GridAdventure1
             MP = 50;
             hitRange = 60;
             newMove = "Tide Pool";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class WaterTier2 : Meeba
+    public class Pond : Meeba
     {
-        public WaterTier2()
+        public Pond()
         {
-            name = "WaterTier2"; //obviously this will change
+            name = "Pond Meeba"; //obviously this will change
             elementType = "water";
             levelTier = 2;
             attackBonus = 6;
@@ -674,27 +453,14 @@ namespace GridAdventure1
             MP = 80;
             hitRange = 70;
             newMove = "Bubble Jet";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class WaterTier3 : Meeba
+    public class Lake : Meeba
     {
-        public WaterTier3()
+        public Lake()
         {
-            name = "WaterTier3"; //obviously this will change
+            name = "Lake Meeba"; //obviously this will change
             elementType = "water";
             levelTier = 3;
             attackBonus = 10;
@@ -704,27 +470,14 @@ namespace GridAdventure1
             MP = 100;
             hitRange = 80;
             newMove = "Deluge";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class WaterTier4 : Meeba
+    public class Ocean : Meeba
     {
-        public WaterTier4()
+        public Ocean()
         {
-            name = "WaterTier4"; //obviously this will change
+            name = "Ocean Meeba"; //obviously this will change
             elementType = "water";
             levelTier = 4;
             attackBonus = 15;
@@ -734,27 +487,14 @@ namespace GridAdventure1
             MP = 120;
             hitRange = 90;
             newMove = "Monsoon";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class FirePlantTier1 : Meeba
+    public class Cinder : Meeba
     {
-        public FirePlantTier1()
+        public Cinder()
         {
-            name = "FirePlantTier1"; //obviously this will change
+            name = "Cinder Meeba"; //obviously this will change
             elementType = "charcoal";
             levelTier = 1;
             attackBonus = 6;
@@ -767,27 +507,14 @@ namespace GridAdventure1
             lifeLeechChance = 20; //%
             lifeLeechHeal = 15; //% total hp
             newMove = "Bio-Acid";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class FirePlantTier2 : Meeba
+    public class Ember : Meeba
     {
-        public FirePlantTier2()
+        public Ember()
         {
-            name = "FirePlantTier2"; //obviously this will change
+            name = "Ember Meeba"; //obviously this will change
             elementType = "charcoal";
             levelTier = 2;
             attackBonus = 11;
@@ -799,27 +526,14 @@ namespace GridAdventure1
             poisonOne = true;
             poisonChance = 20;
             newMove = "Pyriscent Bullets";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class FirePlantTier3 : Meeba
+    public class Charred : Meeba
     {
-        public FirePlantTier3()
+        public Charred()
         {
-            name = "FirePlantTier3"; //obviously this will change
+            name = "Charred Meeba"; //obviously this will change
             elementType = "charcoal";
             levelTier = 3;
             attackBonus = 17;
@@ -832,27 +546,14 @@ namespace GridAdventure1
             lifeLeechChance = 20; //%
             lifeLeechHeal = 25; //% total hp
             newMove = "Charcoal Smog";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class FirePlantTier4 : Meeba
+    public class Ash : Meeba
     {
-        public FirePlantTier4()
+        public Ash()
         {
-            name = "FirePlantTier4"; //obviously this will change
+            name = "Ash Meeba"; //obviously this will change
             elementType = "charcoal";
             levelTier = 4;
             attackBonus = 25;
@@ -864,27 +565,14 @@ namespace GridAdventure1
             poisonTwo = true;
             poisonChance = 20;
             newMove = "Solar Flare";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantEarthTier1 : Meeba
+    public class Algae : Meeba
     {
-        public PlantEarthTier1()
+        public Algae()
         {
-            name = "PlantEarthTier1"; //obviously this will change
+            name = "Algae Meeba"; //obviously this will change
             elementType = "moss";
             levelTier = 1;
             attackBonus = 2;
@@ -897,27 +585,14 @@ namespace GridAdventure1
             lifeLeechChance = 20; //%
             lifeLeechHeal = 15; //% total hp
             newMove = "Stonewort";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantEarthTier2 : Meeba
+    public class Lichen : Meeba
     {
-        public PlantEarthTier2()
+        public Lichen()
         {
-            name = "PlantEarthTier2"; //obviously this will change
+            name = "Lichen Meeba"; //obviously this will change
             elementType = "moss";
             levelTier = 2;
             attackBonus = 6;
@@ -929,27 +604,14 @@ namespace GridAdventure1
             poisonOne = true;
             poisonChance = 20;
             newMove = "Thicket Surge";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantEarthTier3 : Meeba
+    public class Bog : Meeba
     {
-        public PlantEarthTier3()
+        public Bog()
         {
-            name = "PlantEarthTier3"; //obviously this will change
+            name = "Bog Meeba"; //obviously this will change
             elementType = "moss";
             levelTier = 3;
             attackBonus = 10;
@@ -962,27 +624,14 @@ namespace GridAdventure1
             lifeLeechChance = 20; //%
             lifeLeechHeal = 25; //% total hp
             newMove = "Leaching Roots";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class PlantEarthTier4 : Meeba
+    public class Swamp : Meeba
     {
-        public PlantEarthTier4()
+        public Swamp()
         {
-            name = "PlantEarthTier4"; //obviously this will change
+            name = "Swamp Meeba"; //obviously this will change
             elementType = "moss";
             levelTier = 4;
             attackBonus = 15;
@@ -994,27 +643,14 @@ namespace GridAdventure1
             poisonTwo = true;
             poisonChance = 20;
             newMove = "Toxic Soil";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthAirTier1 : Meeba
+    public class Sand : Meeba
     {
-        public EarthAirTier1()
+        public Sand()
         {
-            name = "EarthAirTier1"; //obviously this will change
+            name = "Sand Meeba"; //obviously this will change
             elementType = "dust";
             levelTier = 1;
             attackBonus = 2;
@@ -1024,27 +660,14 @@ namespace GridAdventure1
             MP = 50;
             hitRange = 60;
             newMove = "Sandstorm";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthAirTier2 : Meeba
+    public class Loess : Meeba
     {
-        public EarthAirTier2()
+        public Loess()
         {
-            name = "EarthAirTier2"; //obviously this will change
+            name = "Loess Meeba"; //obviously this will change
             elementType = "dust";
             levelTier = 2;
             attackBonus = 6;
@@ -1054,27 +677,14 @@ namespace GridAdventure1
             MP = 80;
             hitRange = 70;
             newMove = "Erode";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthAirTier3 : Meeba
+    public class Dune : Meeba
     {
-        public EarthAirTier3()
+        public Dune()
         {
-            name = "EarthAirTier3"; //obviously this will change
+            name = "Dune Meeba"; //obviously this will change
             elementType = "dust";
             levelTier = 3;
             attackBonus = 10;
@@ -1084,27 +694,14 @@ namespace GridAdventure1
             MP = 100;
             hitRange = 80;
             newMove = "Landslide";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class EarthAirTier4 : Meeba
+    public class Desert : Meeba
     {
-        public EarthAirTier4()
+        public Desert()
         {
-            name = "EarthAirTier4"; //obviously this will change
+            name = "Desert Meeba"; //obviously this will change
             elementType = "dust";
             levelTier = 4;
             attackBonus = 15;
@@ -1114,27 +711,14 @@ namespace GridAdventure1
             MP = 120;
             hitRange = 90;
             newMove = "Dust Devil";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirWaterTier1 : Meeba
+    public class Cloud : Meeba
     {
-        public AirWaterTier1()
+        public Cloud()
         {
-            name = "AirWaterTier1"; //obviously this will change
+            name = "Cloud Meeba"; //obviously this will change
             elementType = "storm";
             levelTier = 1;
             attackBonus = 2;
@@ -1144,27 +728,14 @@ namespace GridAdventure1
             MP = 50;
             hitRange = 60;
             newMove = "Hail";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirWaterTier2 : Meeba
+    public class Hailstone : Meeba
     {
-        public AirWaterTier2()
+        public Hailstone()
         {
-            name = "AirWaterTier2"; //obviously this will change
+            name = "Hailstone Meeba"; //obviously this will change
             elementType = "storm";
             levelTier = 2;
             attackBonus = 6;
@@ -1174,27 +745,14 @@ namespace GridAdventure1
             MP = 80;
             hitRange = 70;
             newMove = "Snowstorm";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirWaterTier3 : Meeba
+    public class Thunder : Meeba
     {
-        public AirWaterTier3()
+        public Thunder()
         {
-            name = "AirWaterTier3"; //obviously this will change
+            name = "Thunder Meeba"; //obviously this will change
             elementType = "storm";
             levelTier = 3;
             attackBonus = 10;
@@ -1204,27 +762,14 @@ namespace GridAdventure1
             MP = 100;
             hitRange = 80;
             newMove = "CureloNimbus";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class AirWaterTier4 : Meeba
+    public class Lightning : Meeba
     {
-        public AirWaterTier4()
+        public Lightning()
         {
-            name = "AirWaterTier4"; //obviously this will change
+            name = "Lightning Meeba"; //obviously this will change
             elementType = "storm";
             levelTier = 4;
             attackBonus = 15;
@@ -1234,27 +779,14 @@ namespace GridAdventure1
             MP = 120;
             hitRange = 90;
             newMove = "Cloud Burst";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class WaterFireTier1 : Meeba
+    public class Evapo : Meeba
     {
-        public WaterFireTier1()
+        public Evapo()
         {
-            name = "WaterFireTier1"; //obviously this will change
+            name = "Evapo Meeba"; //obviously this will change
             elementType = "hydrotherm";
             levelTier = 1;
             attackBonus = 6;
@@ -1264,27 +796,14 @@ namespace GridAdventure1
             MP = 50;
             hitRange = 60;
             newMove = "Vaporise";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class WaterFireTier2 : Meeba
+    public class Vapour : Meeba
     {
-        public WaterFireTier2()
+        public Vapour()
         {
-            name = "WaterFireTier2"; //obviously this will change
+            name = "Vapour Meeba"; //obviously this will change
             elementType = "hydrotherm";
             levelTier = 2;
             attackBonus = 11;
@@ -1294,27 +813,14 @@ namespace GridAdventure1
             MP = 80;
             hitRange = 70;
             newMove = "Hot Spring";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
-    public class WaterFireTier3 : Meeba
+    public class Vent : Meeba
     {
-        public WaterFireTier3()
+        public Vent()
         {
-            name = "WaterFireTier3"; //obviously this will change
+            name = "Vent Meeba"; //obviously this will change
             elementType = "hydrotherm";
             levelTier = 3;
             attackBonus = 17;
@@ -1324,19 +830,6 @@ namespace GridAdventure1
             MP = 100;
             hitRange = 80;
             newMove = "Geyser";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 
@@ -1354,19 +847,6 @@ namespace GridAdventure1
             MP = 120;
             hitRange = 90;
             newMove = "Hydrothermal Blast";
-            //sprite = new string[1, 8] 
-            //    {
-            //    {
-            //         @"      ___________      ",
-            //         @"     />>>>>>>>>n_\__ n ",
-            //         @"    />>>>>>>>> /#   #\ ",
-            //         @"   />>>>>>>>>> \q# #q/ ",
-            //         @"  |<>>>####     \# #/\ ",
-            //         @"  |//########\###\o/##|",
-            //         @"   |#/       |#/    \#|",
-            //         @"    m         m      m "
-            //    },
-            //    };
         }
     }
 }

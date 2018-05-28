@@ -51,6 +51,7 @@ namespace GridAdventure1
             itemName = "shield";
             itemDescription = "It should protect against very weak foes";
             itemType = "shield";
+            itemBuyValue = 35;
             equippable = true;
             itemBodyLocation = "shield";
             itemStrengthBonus = 0;
@@ -70,6 +71,42 @@ namespace GridAdventure1
                    @" __  .~~-¬.            ",
                    @"/__\/-#=#|\\_ =@>      ",
                    @"\_@=/##=#/ `-/'        ",
+                   @"     |#_/]             ",
+                   @"      |_ \_            "
+                },
+                };
+        }
+    }
+
+    public class LacqueredShield : Item
+    {
+        public LacqueredShield()
+        {
+            weaponstatName = "beginnings";
+            weaponelementName = "neutral";
+            itemName = "lacquered shield";
+            itemDescription = "It should protect against medium foes";
+            itemType = "shield";
+            itemBuyValue = 35;
+            equippable = true;
+            itemBodyLocation = "shield";
+            itemStrengthBonus = 0;
+            itemDefenseBonus = 15;
+            itemSpeedBonus = 0;
+            itemCharismaBonus = 0;
+            itemHPGain = 0;
+            itemHitGain = 0;
+            weaponAugment = "";
+            weaponElement = "";
+            sprite = new string[1, 8]
+                {
+                {
+                   @"       ~~~             ",
+                   @"     ~~~=.\            ",
+                   @"    ~~~~ _/            ",
+                   @" __  .~~-¬.            ",
+                   @"/@@\/-#=#|\\_ =@>      ",
+                   @"\@@=/##=#/ `-/'        ",
                    @"     |#_/]             ",
                    @"      |_ \_            "
                 },
@@ -148,6 +185,41 @@ namespace GridAdventure1
         }
     }
 
+    public class MegaSword : Item
+    {
+        public MegaSword()
+        {
+            weaponstatName = "beginnings";
+            weaponelementName = "neutral";
+            itemName = "mega sword";
+            itemDescription = "A sword of legendary abilities";
+            itemType = "weapon";
+            itemBuyValue = 200;
+            itemSellValue = 100;
+            equippable = true;
+            itemBodyLocation = "weapon";
+            itemStrengthBonus = 30;
+            itemSpeedBonus = 0;
+            itemDefenseBonus = 5;
+            itemCharismaBonus = 10;
+            itemHPGain = 0;
+            itemHitGain = 0;
+            sprite = new string[1, 8]
+                {
+                {
+                  @"       ~~~          *  ",
+                  @"     ~~~=.\        //  ",
+                  @"    ~~~~ _/       //   ",
+                  @" __  .~~-¬.      //    ",
+                  @"/__\/-#=#|\\_ =@>>     ",
+                  @"\_@=/##=#/ `-/'        ",
+                  @"     |#_/]             ",
+                  @"      |_ \_            "
+                },
+                };
+        }
+    }
+
     public class Axe : Item
     {
         public Axe()
@@ -155,7 +227,7 @@ namespace GridAdventure1
             weaponstatName = "beginnings";
             weaponelementName = "neutral";
             itemName = "axe";
-            itemDescription = "";
+            itemDescription = "A decent axe for aspiring adventurers";
             itemType = "weapon";
             itemBuyValue = 20;
             itemSellValue = 10;
@@ -190,13 +262,13 @@ namespace GridAdventure1
             weaponstatName = "beginnings";
             weaponelementName = "neutral";
             itemName = "mace";
-            itemDescription = "";
+            itemDescription = "A decent mace for aspiring adventurers";
             itemType = "weapon";
-            itemBuyValue = 20;
-            itemSellValue = 10;
+            itemBuyValue = 35;
+            itemSellValue = 15;
             equippable = true;
             itemBodyLocation = "weapon";
-            itemStrengthBonus = 6;
+            itemStrengthBonus = 15;
             itemSpeedBonus = -3;
             itemDefenseBonus = 0;
             itemCharismaBonus = 0;
@@ -225,7 +297,7 @@ namespace GridAdventure1
             weaponstatName = "beginnings";
             weaponelementName = "neutral";
             itemName = "spear";
-            itemDescription = "";
+            itemDescription = "A decent spear for aspiring adventurers";
             itemType = "weapon";
             itemBuyValue = 20;
             itemSellValue = 10;
@@ -260,14 +332,14 @@ namespace GridAdventure1
             weaponstatName = "beginnings";
             weaponelementName = "neutral";
             itemName = "bow";
-            itemDescription = "";
+            itemDescription = "A decent bow for aspiring adventurers";
             itemType = "weapon";
-            itemBuyValue = 20;
+            itemBuyValue = 35;
             itemSellValue = 10;
             equippable = true;
             itemBodyLocation = "weapon";
-            itemStrengthBonus = 3;
-            itemSpeedBonus = 3;
+            itemStrengthBonus = 10;
+            itemSpeedBonus = 10;
             itemDefenseBonus = 0;
             itemCharismaBonus = 0;
             itemHPGain = 0;
@@ -355,7 +427,7 @@ namespace GridAdventure1
             itemBuyValue = 2;
             itemSellValue = 0;
             equippable = false;
-            itemHPGain = 5;
+            itemHPGain = 6;
             allyTargetBattle = true;
             edibleVerb = "ate";
         }
@@ -366,7 +438,7 @@ namespace GridAdventure1
         public TinyParsnip()
         {
             itemName = "tiny parsnip";
-            itemDescription = "It could probably just about feed a mouse";
+            itemDescription = "It leaves a lot to be desired.";
             itemType = "healthgain";
             itemBuyValue = 0;
             itemSellValue = 0;
@@ -382,7 +454,7 @@ namespace GridAdventure1
         public Carrot()
         {
             itemName = "carrot";
-            itemDescription = "You feel like you could see in the dark! Maybe best to stick with the flashlight though.";
+            itemDescription = "It's just an ordinary carrot.";
             itemType = "healthgain";
             itemBuyValue = 0;
             itemSellValue = 0;
@@ -446,28 +518,28 @@ namespace GridAdventure1
         public WildBerries()
         {
             itemName = "apple";
-            itemDescription = "";
+            itemDescription = "I wonder if these berries grow all year round?";
             itemType = "healthgain";
             itemBuyValue = 2;
             itemSellValue = 0;
             equippable = false;
-            itemHPGain = 2;
+            itemHPGain = 6;
             allyTargetBattle = true;
             edibleVerb = "ate";
         }
     }
 
-    public class Oats : Item
+    public class BagOfOats : Item
     {
-        public Oats()
+        public BagOfOats()
         {
-            itemName = "oats";
+            itemName = "bag of oats";
             itemDescription = "Versatile and full of fibre!";
             itemType = "healthgain";
             itemBuyValue = 5;
             itemSellValue = 0;
             equippable = false;
-            itemHPGain = 5;
+            itemHPGain = 10;
             allyTargetBattle = true;
             edibleVerb = "ate";
         }
@@ -483,7 +555,56 @@ namespace GridAdventure1
             itemBuyValue = 8;
             itemSellValue = 0;
             equippable = false;
-            itemHPGain = 5;
+            itemHPGain = 10;
+            allyTargetBattle = true;
+            edibleVerb = "ate";
+        }
+    }
+
+    public class Sandwich : Item
+    {
+        public Sandwich()
+        {
+            itemName = "sandwich";
+            itemDescription = "Text... the best flavour?";
+            itemType = "healthgain";
+            itemBuyValue = 12;
+            itemSellValue = 0;
+            equippable = false;
+            itemHPGain = 20;
+            allyTargetBattle = true;
+            edibleVerb = "ate";
+        }
+    }
+
+    public class Burger : Item
+    {
+        public Burger()
+        {
+            itemName = "burger";
+            itemDescription = "";
+            itemType = "healthgain";
+            itemBuyValue = 20;
+            itemSellValue = 0;
+            equippable = false;
+            itemHPGain = 30;
+            allyTargetBattle = true;
+            edibleVerb = "ate";
+        }
+    }
+
+    public class Fishcake : Item
+    {
+        public Fishcake()
+        {
+            itemName = "fishcake";
+            itemDescription = "This smells a bit fishy to me.";
+            itemType = "healthgain";
+            itemBuyValue = 20;
+            itemSellValue = 0;
+            equippable = false;
+            itemHPGain = 30;
+            itemMPGain = 30;
             allyTargetBattle = true;
             edibleVerb = "ate";
         }
@@ -552,6 +673,19 @@ namespace GridAdventure1
         }
     }
 
+    public class Mushrooms : Item //awakens
+    {
+        public Mushrooms()
+        {
+            itemName = "mushrooms";
+            itemDescription = "These don't look like regular mushrooms.";
+            itemType = "drug";
+            itemBuyValue = 0;
+            itemSellValue = 0;
+            edibleVerb = "ate";
+        }
+    }
+
     public class FavDrink : Item //full-restore hp
     {
         public FavDrink()
@@ -574,6 +708,18 @@ namespace GridAdventure1
             itemName = "rock";
             itemDescription = "This rocks";
             itemType = "battleOffensive";
+            battleDamage = 10;
+            opponentTargetBattle = true;
+        }
+    }
+
+    public class BatDropping : Item
+    {
+        public BatDropping()
+        {
+            itemName = "bat dropping";
+            itemDescription = "Gross.";
+            itemType = "battleOffensive";
             battleDamage = 5;
             opponentTargetBattle = true;
         }
@@ -594,8 +740,36 @@ namespace GridAdventure1
         public Flashlight()
         {
             itemName = "flashlight";
-            itemDescription = "The light of my life";
+            itemDescription = "It seems to be mechanically powered.";
             itemType = "torch";
+            itemBuyValue = 10;
+            itemSellValue = 2;
+            equippable = false;
+            keyItem = true;
+        }
+    }
+
+    public class Key : Item
+    {
+        public Key()
+        {
+            itemName = "key";
+            itemDescription = "Which lock does this open?";
+            itemType = "key";
+            itemBuyValue = 10;
+            itemSellValue = 2;
+            equippable = false;
+            keyItem = true;
+        }
+    }
+
+    public class Letter : Item
+    {
+        public Letter()
+        {
+            itemName = "letter";
+            itemDescription = "They keep trying to steal my most prized posession, so I've hidden it! They'll never find it in the forest.";
+            itemType = "book";
             itemBuyValue = 10;
             itemSellValue = 2;
             equippable = false;
@@ -636,7 +810,7 @@ namespace GridAdventure1
         public Ellondite()
         {
             itemName = "ellondite";
-            itemDescription = "";
+            itemDescription = "It's a grey rock with large white crystals throughout.";
             itemType = "ellondite";
             itemBuyValue = 10;
             itemSellValue = 2;
@@ -650,7 +824,7 @@ namespace GridAdventure1
         public Protomeebium()
         {
             itemName = "protomeebium";
-            itemDescription = "";
+            itemDescription = "It's a fairly viscous turquoise liquid that is glowing inside of the vial you collected it in.";
             itemType = "protomeebium";
             itemBuyValue = 10;
             itemSellValue = 2;
@@ -664,7 +838,7 @@ namespace GridAdventure1
         public ProtomeebiumBook()
         {
             itemName = "protomeebium book";
-            itemDescription = "...The substance known as Protomeebium was recently soured from one of its rare locations. My colleagues and I have conducted chemical analyses, which concluded that protomeebium is primarily a Carbon-based substance with relatively high traces of Uranium. It is generally unreactive, unless in the presence of an as of yet unidentified rock that can be found close to the Protomeebium locality. Under heat and pressure the Protomeebium reacts when exposed to this rock.\n     -Dr. Grell, Eclipse Research Department";
+            itemDescription = "...The substance known as Protomeebium was recently sourced from one of its rare locations. My colleagues and I have conducted chemical analyses, which concluded that protomeebium is primarily a Carbon-based substance with relatively high traces of Uranium. It is generally unreactive, unless in the presence of an as-of-yet unidentified rock that can be found close to the Protomeebium locality. Under heat and pressure the Protomeebium reacts when exposed to this rock.\n     -Dr. Grell, Eclipse Research Department";
             itemType = "book";
             itemBuyValue = 10;
             itemSellValue = 2;
@@ -692,7 +866,7 @@ namespace GridAdventure1
         public HistoryRiftonVillageBook()
         {
             itemName = "history of rifton village";
-            itemDescription = "";
+            itemDescription = "The village of Rifton was founded over 300 years ago, with its location chosen due to the protective walls of the canyon either side. It is thought that there may have been previous settlements in this location prior to Rifton from archaeological remians, although it is unknown why the area was then abandoned.";
             itemType = "book";
             itemBuyValue = 10;
             itemSellValue = 2;
@@ -706,7 +880,7 @@ namespace GridAdventure1
         public PollutedLandsBook()
         {
             itemName = "the polluted lands";
-            itemDescription = "The Polluted Lands.\nChapter 1.\n";
+            itemDescription = "The Polluted Lands.\nChapter 1.\nThe past 50 years have seen an increase in radioactivity levels in the Terethian subsoils, notably towards the northeast of the continent. A reduction in flora and behavioural changes in fauna in the vicinity of these regions has been documented, and will be discussed further in this book.";
             itemType = "book";
             itemBuyValue = 10;
             itemSellValue = 2;
@@ -720,7 +894,7 @@ namespace GridAdventure1
         public GardeningBeginnersBook()
         {
             itemName = "Soil Quality and Gardening";
-            itemDescription = "During the past 30 years environmental surveys have shown an increase in contamination levels of soil in arable land.\nThis has been attributed in part to increased pollution associated with industrious endeavors to create more efficient energy resources, however the full impact of this is still unknown.\nThe contamination appears to decrease with soil depth, and farmers have found that ploughing soil to a deeper level has alleviated the reduction in soil quality somewhat.\nIdeally, a longer-term solution should be created to prevent further issues arising.";
+            itemDescription = "During the past 30 years environmental surveys have shown an increase in contamination levels of soil in arable land. This has been attributed in part to increased pollution associated with industrious endeavors to create more efficient energy resources, however the full impact of this is still unknown. The contamination appears to decrease with soil depth, and farmers have found that ploughing soil to a deeper level has alleviated the reduction in soil quality somewhat. Ideally, a longer-term solution should be created to prevent further issues arising.";
             itemType = "book";
             itemBuyValue = 10;
             itemSellValue = 2;
@@ -1132,6 +1306,7 @@ namespace GridAdventure1
         public FireEgg()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "fire egg";
             elementType = "fire";
             dropItemLevel = 1;
@@ -1142,6 +1317,7 @@ namespace GridAdventure1
         public FlameGloop()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "flame gloop";
             elementType = "fire";
             dropItemLevel = 1;
@@ -1152,6 +1328,7 @@ namespace GridAdventure1
         public CoalArmour()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "coal armour";
             elementType = "fire";
             dropItemLevel = 2;
@@ -1162,6 +1339,7 @@ namespace GridAdventure1
         public Flint()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "flint";
             elementType = "fire";
             dropItemLevel = 2;
@@ -1172,6 +1350,7 @@ namespace GridAdventure1
         public FireFang()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "fire fang";
             elementType = "fire";
             dropItemLevel = 3;
@@ -1182,6 +1361,7 @@ namespace GridAdventure1
         public BurningTail()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "burning tail";
             elementType = "fire";
             dropItemLevel = 3;
@@ -1192,6 +1372,7 @@ namespace GridAdventure1
         public InfernalScale()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "infernal scale";
             elementType = "fire";
             dropItemLevel = 4;
@@ -1202,6 +1383,7 @@ namespace GridAdventure1
         public LavaRock()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "lava rock";
             elementType = "fire";
             dropItemLevel = 4;
@@ -1212,6 +1394,7 @@ namespace GridAdventure1
         public Seed()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "seed";
             elementType = "plant";
             dropItemLevel = 1;
@@ -1222,6 +1405,7 @@ namespace GridAdventure1
         public Spore()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "spore";
             elementType = "plant";
             dropItemLevel = 1;
@@ -1232,6 +1416,7 @@ namespace GridAdventure1
         public GrassScale()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "grass scale";
             elementType = "plant";
             dropItemLevel = 2;
@@ -1242,6 +1427,7 @@ namespace GridAdventure1
         public PollenFang()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "pollen fang";
             elementType = "plant";
             dropItemLevel = 2;
@@ -1252,6 +1438,7 @@ namespace GridAdventure1
         public Thorn()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "thorn";
             elementType = "plant";
             dropItemLevel = 3;
@@ -1262,6 +1449,7 @@ namespace GridAdventure1
         public VineBerry()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "vine berry";
             elementType = "plant";
             dropItemLevel = 3;
@@ -1272,6 +1460,7 @@ namespace GridAdventure1
         public RottingBranch()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "rotting branch";
             elementType = "plant";
             dropItemLevel = 4;
@@ -1282,6 +1471,7 @@ namespace GridAdventure1
         public GoldenLeaf()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "golden leaf";
             elementType = "plant";
             dropItemLevel = 4;
@@ -1292,6 +1482,7 @@ namespace GridAdventure1
         public MudBall()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "mud ball";
             elementType = "earth";
             dropItemLevel = 1;
@@ -1302,6 +1493,7 @@ namespace GridAdventure1
         public Granule()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "granule";
             elementType = "earth";
             dropItemLevel = 1;
@@ -1312,6 +1504,7 @@ namespace GridAdventure1
         public EarthyClaw()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "earthy claw";
             elementType = "earth";
             dropItemLevel = 2;
@@ -1322,6 +1515,7 @@ namespace GridAdventure1
         public MuddyFur()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "muddy fur";
             elementType = "earth";
             dropItemLevel = 2;
@@ -1332,6 +1526,7 @@ namespace GridAdventure1
         public OldBone()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "old bone";
             elementType = "earth";
             dropItemLevel = 3;
@@ -1342,6 +1537,7 @@ namespace GridAdventure1
         public Fossil()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "fossil";
             elementType = "earth";
             dropItemLevel = 3;
@@ -1352,6 +1548,7 @@ namespace GridAdventure1
         public GrittyPaw()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "gritty paw";
             elementType = "earth";
             dropItemLevel = 4;
@@ -1362,6 +1559,7 @@ namespace GridAdventure1
         public RockSlab()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "rock slab";
             elementType = "earth";
             dropItemLevel = 4;
@@ -1372,6 +1570,7 @@ namespace GridAdventure1
         public ChitinWing()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "chitin wing";
             elementType = "air";
             dropItemLevel = 1;
@@ -1382,6 +1581,7 @@ namespace GridAdventure1
         public Antenna()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "antenna";
             elementType = "air";
             dropItemLevel = 1;
@@ -1392,6 +1592,7 @@ namespace GridAdventure1
         public LightWing()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "light wing";
             elementType = "air";
             dropItemLevel = 2;
@@ -1402,6 +1603,7 @@ namespace GridAdventure1
         public HookedClaw()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "hooked claw";
             elementType = "air";
             dropItemLevel = 2;
@@ -1412,6 +1614,7 @@ namespace GridAdventure1
         public Feather()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "feather";
             elementType = "air";
             dropItemLevel = 3;
@@ -1422,6 +1625,7 @@ namespace GridAdventure1
         public SharpBeak()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "sharp beak";
             elementType = "air";
             dropItemLevel = 3;
@@ -1432,6 +1636,7 @@ namespace GridAdventure1
         public VentifactScale()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "ventifact scale";
             elementType = "air";
             dropItemLevel = 4;
@@ -1442,6 +1647,7 @@ namespace GridAdventure1
         public HollowFang()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "hollow fang";
             elementType = "air";
             dropItemLevel = 4;
@@ -1452,6 +1658,7 @@ namespace GridAdventure1
         public Spicule()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "spicule";
             elementType = "water";
             dropItemLevel = 1;
@@ -1462,6 +1669,7 @@ namespace GridAdventure1
         public SeaGloop()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "sea gloop";
             elementType = "water";
             dropItemLevel = 1;
@@ -1472,6 +1680,7 @@ namespace GridAdventure1
         public OceanScale()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "ocean scale";
             elementType = "water";
             dropItemLevel = 2;
@@ -1482,6 +1691,7 @@ namespace GridAdventure1
         public Fin()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "fin";
             elementType = "water";
             dropItemLevel = 2;
@@ -1492,6 +1702,7 @@ namespace GridAdventure1
         public Tentacle()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "tentacle";
             elementType = "water";
             dropItemLevel = 3;
@@ -1502,6 +1713,7 @@ namespace GridAdventure1
         public Biolume()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "biolume";
             elementType = "water";
             dropItemLevel = 3;
@@ -1512,6 +1724,7 @@ namespace GridAdventure1
         public DeepSeaBlubber()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "deep-sea blubber";
             elementType = "water";
             dropItemLevel = 4;
@@ -1522,6 +1735,7 @@ namespace GridAdventure1
         public OceanFin()
         {
             itemType = "dropItem";
+            itemDescription = "This item may be worth examining back at the lab.";
             itemName = "ocean fin";
             elementType = "water";
             dropItemLevel = 4;
@@ -1533,6 +1747,7 @@ namespace GridAdventure1
         public TinderRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "tinder root";
             elementType = "fire";
             dropItemLevel = 1;
@@ -1543,6 +1758,7 @@ namespace GridAdventure1
         public SmokeRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "smoke root";
             elementType = "fire";
             dropItemLevel = 2;
@@ -1553,6 +1769,7 @@ namespace GridAdventure1
         public FlameRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "flame root";
             elementType = "fire";
             dropItemLevel = 3;
@@ -1563,6 +1780,7 @@ namespace GridAdventure1
         public InfernoRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "inferno root";
             elementType = "fire";
             dropItemLevel = 4;
@@ -1573,6 +1791,7 @@ namespace GridAdventure1
         public SproutRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "sprout root";
             elementType = "plant";
             dropItemLevel = 1;
@@ -1583,6 +1802,7 @@ namespace GridAdventure1
         public GrassRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "grass root";
             elementType = "plant";
             dropItemLevel = 2;
@@ -1593,6 +1813,7 @@ namespace GridAdventure1
         public VineRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "vine root";
             elementType = "plant";
             dropItemLevel = 3;
@@ -1603,6 +1824,7 @@ namespace GridAdventure1
         public ForestRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "forest root";
             elementType = "plant";
             dropItemLevel = 4;
@@ -1613,6 +1835,7 @@ namespace GridAdventure1
         public SoilRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "soil root";
             elementType = "earth";
             dropItemLevel = 1;
@@ -1623,6 +1846,7 @@ namespace GridAdventure1
         public BoulderRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "boulder root";
             elementType = "earth";
             dropItemLevel = 2;
@@ -1633,6 +1857,7 @@ namespace GridAdventure1
         public TerraRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "terra root";
             elementType = "earth";
             dropItemLevel = 3;
@@ -1643,6 +1868,7 @@ namespace GridAdventure1
         public MountRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "mount root";
             elementType = "earth";
             dropItemLevel = 4;
@@ -1653,6 +1879,7 @@ namespace GridAdventure1
         public BreezeRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "breeze root";
             elementType = "air";
             dropItemLevel = 1;
@@ -1663,6 +1890,7 @@ namespace GridAdventure1
         public WindRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "wind root";
             elementType = "air";
             dropItemLevel = 2;
@@ -1673,6 +1901,7 @@ namespace GridAdventure1
         public SkyRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "sky root";
             elementType = "air";
             dropItemLevel = 3;
@@ -1683,6 +1912,7 @@ namespace GridAdventure1
         public AtmosRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "atmos root";
             elementType = "air";
             dropItemLevel = 4;
@@ -1693,6 +1923,7 @@ namespace GridAdventure1
         public DropRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "drop root";
             elementType = "water";
             dropItemLevel = 1;
@@ -1703,6 +1934,7 @@ namespace GridAdventure1
         public PondRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "pond root";
             elementType = "water";
             dropItemLevel = 2;
@@ -1713,6 +1945,7 @@ namespace GridAdventure1
         public LakeRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "lake root";
             elementType = "water";
             dropItemLevel = 3;
@@ -1723,6 +1956,7 @@ namespace GridAdventure1
         public OceanRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "ocean root";
             elementType = "water";
             dropItemLevel = 4;
@@ -1733,6 +1967,7 @@ namespace GridAdventure1
         public CinderRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "cinder root";
             elementType = "charcoal";
             dropItemLevel = 1;
@@ -1743,6 +1978,7 @@ namespace GridAdventure1
         public EmberRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "ember root";
             elementType = "charcoal";
             dropItemLevel = 2;
@@ -1753,6 +1989,7 @@ namespace GridAdventure1
         public CharredRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "charred root";
             elementType = "charcoal";
             dropItemLevel = 3;
@@ -1763,6 +2000,7 @@ namespace GridAdventure1
         public AshRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "ash root";
             elementType = "charcoal";
             dropItemLevel = 4;
@@ -1773,6 +2011,7 @@ namespace GridAdventure1
         public AlgaeRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "algae root";
             elementType = "moss";
             dropItemLevel = 1;
@@ -1783,6 +2022,7 @@ namespace GridAdventure1
         public LichenRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "lichen root";
             elementType = "moss";
             dropItemLevel = 2;
@@ -1793,6 +2033,7 @@ namespace GridAdventure1
         public BogRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "bog root";
             elementType = "moss";
             dropItemLevel = 3;
@@ -1803,6 +2044,7 @@ namespace GridAdventure1
         public SwampRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "swamp root";
             elementType = "moss";
             dropItemLevel = 4;
@@ -1813,6 +2055,7 @@ namespace GridAdventure1
         public SandRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "sand root";
             elementType = "dust";
             dropItemLevel = 1;
@@ -1823,6 +2066,7 @@ namespace GridAdventure1
         public LoessRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "loess root";
             elementType = "dust";
             dropItemLevel = 2;
@@ -1833,6 +2077,7 @@ namespace GridAdventure1
         public DuneRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "dune root";
             elementType = "dust";
             dropItemLevel = 3;
@@ -1843,6 +2088,7 @@ namespace GridAdventure1
         public DesertRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "desert root";
             elementType = "dust";
             dropItemLevel = 4;
@@ -1853,6 +2099,7 @@ namespace GridAdventure1
         public CloudRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "cloud root";
             elementType = "storm";
             dropItemLevel = 1;
@@ -1863,6 +2110,7 @@ namespace GridAdventure1
         public HailRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "hail root";
             elementType = "storm";
             dropItemLevel = 2;
@@ -1873,6 +2121,7 @@ namespace GridAdventure1
         public ThunderRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "thunder root";
             elementType = "storm";
             dropItemLevel = 3;
@@ -1883,6 +2132,7 @@ namespace GridAdventure1
         public LightningRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "lightning root";
             elementType = "storm";
             dropItemLevel = 4;
@@ -1893,6 +2143,7 @@ namespace GridAdventure1
         public EvapoRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "evapo root";
             elementType = "hydrotherm";
             dropItemLevel = 1;
@@ -1903,6 +2154,7 @@ namespace GridAdventure1
         public VapourRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "vapour root";
             elementType = "hydrotherm";
             dropItemLevel = 2;
@@ -1913,6 +2165,7 @@ namespace GridAdventure1
         public VentRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "vent root";
             elementType = "hydrotherm";
             dropItemLevel = 3;
@@ -1923,6 +2176,7 @@ namespace GridAdventure1
         public GeyserRoot()
         {
             itemType = "evolveItem";
+            itemDescription = "This item can be used for splicing.";
             itemName = "geyser root";
             elementType = "hydrotherm";
             dropItemLevel = 4;
